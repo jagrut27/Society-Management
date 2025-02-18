@@ -1,0 +1,64 @@
+/* Container Styling */
+.user-registration-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light Gray */
+    border: 1px solid #dee2e6; /* Border Color */
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Form Heading */
+.user-registration-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #343a40; /* Dark Gray */
+}
+
+/* Form Field Styling */
+.fill {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.fill label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #495057; /* Medium Gray */
+}
+
+.fill input {
+    padding: 10px;
+    border: 1px solid #adb5bd; /* Light Gray Border */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #ffffff; /* White */
+    color: #212529; /* Dark Gray */
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.fill input:focus {
+    border-color: #007bff; /* Blue */
+}
+
+/* Submit Button Styling */
+button {
+    background-color: #007bff; /* Blue */
+    color: #ffffff; /* White */
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+}   
+
+button:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
