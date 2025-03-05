@@ -1,0 +1,103 @@
+/* ======= Profile Page Styles ======= */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  /* background: linear-gradient(to right, #3498db, #2c3e50); */
+}
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 500px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ======= Avatar Image ======= */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  margin-bottom: 15px;
+}
+
+/* ======= Profile Details ======= */
+.profile-details {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.profile-details p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.profile-details strong {
+  color: #2c3e50;
+}
+
+/* ======= File Upload Section ======= */
+.text-center {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  padding: 5px;
+  transition: border 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border: 2px solid #2980b9;
+  outline: none;
+}
+
+/* ======= Upload Button ======= */
+.btn-success {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #219150;
+}
+
+/* ======= Logout Button ======= */
+.logout-btn {
+  background: #219150;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.logout-btn:hover {
+  background: #41c02b;
+}
+
+/* ======= Responsive Styles ======= */
+@media (max-width: 768px) {
+  .profile-card {
+      width: 90%;
+  }
+}

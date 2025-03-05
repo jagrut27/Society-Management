@@ -1,0 +1,35 @@
+  <!-- Main Content Area -->
+  <div class="dashboard">
+
+
+    <!-- User Profile Section (Visible after clicking 'View Profile') -->
+    <div class="profile-container" *ngIf="showProfile && Userprofile as profile">
+      <div class="profile-card">
+
+        <div class="text-center">
+          <input class="form-control" type="file">
+
+          <button class="btn btn-success">
+            Upload
+          </button>
+        </div>
+
+        <!-- <img src="assets/user-avatar.png" alt="User Avatar" class="avatar"> -->
+         
+        <h3><strong>Name :</strong> {{ profile.firstname }} {{ profile.lastname }}</h3>
+        <h3><strong>Email:</strong> {{ userEmail }}</h3>
+
+        <div class="profile-details">
+          <p><strong>📞 Phone :</strong> {{ profile.phoneNumber }}</p>
+          <p><strong>🚻 Gender :</strong> {{ profile.gender }}</p>
+          <p><strong>🏠 Flat No :</strong> {{ profile.flatNumber }}</p>
+          <p><strong>🏢 Block No:</strong> {{ profile.blockNumber }}</p>
+        </div>
+
+        <!-- Logout Button inside the Profile Card -->
+        <button (click)="logout()" class="logout-btn">Logout</button>
+      </div>
+
+
+    </div>
+  </div>

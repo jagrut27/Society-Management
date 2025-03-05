@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="dashboard-container">
+  <!-- Vertical Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li class="dropdown" style="width: 250px;">
+        <a routerLink="/dashboarduser/user-profile" class="dropbtn">View Profile</a>
+        <div class="dropdown-content" style="width: 220px;">
+          <a routerLink="/dashboarduser/edit-profile">Edit Profile</a>
+          <a routerLink="/dashboarduser/delete-profile">Delete Profile</a>
+        </div>
+      </li>
+      <div class="conainer1">
+        <li><a routerLink="/events">Events</a></li>
+        <li><a routerLink="/complaints">Complaints</a></li>
+        <li><a routerLink="/dashboarduser/maintenance">Maintenance</a></li>
+      </div>
+      
+    </ul>
+  </nav>
+  
+  <!-- Main Content Area -->
+  <div class="dashboard">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Society-Management. All Rights Reserved.</p>
+      <!-- Footer Navigation Links -->
+      <nav class="footer-nav">
+        <a routerLink="/about-us">About Us</a>
+        <a routerLink="/terms-conditions">Terms & Conditions</a>
+      </nav>
+    </div>
+  </footer>
+</div>

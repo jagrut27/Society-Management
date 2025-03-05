@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="left-section">
+    <h1>WELCOME TO THE SOCIETY MANAGEMENT</h1>
+
+    <div class="rocket-image">
+      <!-- <img src="assets/images/society.jpg" alt="Rocket"> -->
+    </div>
+  </div>
+  
+  <div class="right-section">
+    <h2>USER LOGIN</h2>
+
+    <form id="Loginform" (ngSubmit)="Login()">
+      <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input 
+          type="email" 
+          placeholder="Email" 
+          id="email" 
+          name="email" 
+          [(ngModel)]="user1.email" 
+          required>
+      </div>
+
+      <div class="input-container">
+        <i class="fas fa-lock"></i>
+        <input 
+          type="password" 
+          placeholder="Password" 
+          id="password" 
+          name="password" 
+          [(ngModel)]="user1.password" 
+          required>
+      </div>
+
+      <div class="options">
+        <label>
+          <input type="checkbox"> Remember
+        </label>
+        <a href="#">Forgot Password</a>
+      </div>
+
+      <button class="login-btn" type="submit">Login</button>
+
+      <p>Don't have an account? <a href="/user-registration" class="link">Register</a></p>
+    </form>
+  </div>
+</div>
