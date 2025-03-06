@@ -6,13 +6,18 @@ import { AppComponent } from './app.component';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms'; 
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HttpClientModule} from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+//import { CommonModule } from '@angular/common';
 
-import { importProvidersFrom } from '@angular/core';
+//import { importProvidersFrom } from '@angular/core';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminEventsComponent } from './admin-events/admin-events.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminDashboardComponent,
+   // 
   
   ],
   imports: [
@@ -21,9 +26,10 @@ import { importProvidersFrom } from '@angular/core';
     ReactiveFormsModule,
     HttpClientModule,
     
-    
-    AdminLoginComponent,  
-    CommonModule
+    RouterModule.forRoot([]) ,
+    AdminLoginComponent, 
+    AdminEventsComponent, 
+  //  CommonModule
   ],
   providers: [
   //  importProvidersFrom(AdminLoginComponent),

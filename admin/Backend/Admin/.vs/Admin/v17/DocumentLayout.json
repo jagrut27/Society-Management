@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\module\\timespantostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\module\\timespantostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\module\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\module\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\controllers\\adminlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\controllers\\adminlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\module\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\module\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\controllers\\adminlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|solutionrelative:admin\\controllers\\adminlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276BFC9F-D82E-47BB-AD4F-B0F153949BB2}|Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,37 +46,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "EventController.cs",
+              "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Controllers\\EventController.cs",
+              "RelativeDocumentMoniker": "Admin\\Controllers\\EventController.cs",
+              "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Controllers\\EventController.cs",
+              "RelativeToolTip": "Admin\\Controllers\\EventController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAiwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T11:12:52.527Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TimeSpanToStringConverter.cs",
+              "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\TimeSpanToStringConverter.cs",
+              "RelativeDocumentMoniker": "Admin\\Module\\TimeSpanToStringConverter.cs",
+              "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\TimeSpanToStringConverter.cs",
+              "RelativeToolTip": "Admin\\Module\\TimeSpanToStringConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T04:55:00.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationdbContext.cs",
+              "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\ApplicationdbContext.cs",
+              "RelativeDocumentMoniker": "Admin\\Module\\ApplicationdbContext.cs",
+              "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\ApplicationdbContext.cs",
+              "RelativeToolTip": "Admin\\Module\\ApplicationdbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T10:57:50.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Events.cs",
+              "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\Events.cs",
+              "RelativeDocumentMoniker": "Admin\\Module\\Events.cs",
+              "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\Events.cs",
+              "RelativeToolTip": "Admin\\Module\\Events.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T10:44:50.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Admin\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Properties\\launchSettings.json",
               "RelativeToolTip": "Admin\\Properties\\launchSettings.json",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-02-19T09:39:50.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Program.cs",
               "RelativeDocumentMoniker": "Admin\\Program.cs",
               "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Program.cs",
               "RelativeToolTip": "Admin\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAqwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T09:25:21.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\appsettings.json",
               "RelativeDocumentMoniker": "Admin\\appsettings.json",
@@ -68,25 +136,23 @@
               "RelativeToolTip": "Admin\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-19T09:16:40.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T09:16:40.631Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "AdminLoginController.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Controllers\\AdminLoginController.cs",
               "RelativeDocumentMoniker": "Admin\\Controllers\\AdminLoginController.cs",
               "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Controllers\\AdminLoginController.cs",
               "RelativeToolTip": "Admin\\Controllers\\AdminLoginController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T07:25:38.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T07:25:38.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "AdminLogin.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\AdminLogin.cs",
               "RelativeDocumentMoniker": "Admin\\Module\\AdminLogin.cs",
@@ -94,8 +160,7 @@
               "RelativeToolTip": "Admin\\Module\\AdminLogin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T07:24:25.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T07:24:25.101Z"
             }
           ]
         }
