@@ -16,6 +16,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Admin.Controllers.AnnouncementController",
+    "Method": "PostAnnouncement",
+    "RelativePath": "api/Announcement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "announcement",
+        "Type": "Admin.Module.Announcement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Admin.Controllers.AnnouncementController",
+    "Method": "GetAnnouncements",
+    "RelativePath": "api/Announcement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Admin.Controllers.EventController",
     "Method": "GetEvents",
     "RelativePath": "api/Event",

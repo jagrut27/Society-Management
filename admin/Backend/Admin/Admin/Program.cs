@@ -26,6 +26,9 @@ builder.Services.AddDbContext<ApplicationdbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+  
+//Adding Email Service 
+builder.Services.AddSingleton<EmailService>();
 
 var app = builder.Build();
 

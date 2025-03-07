@@ -4,6 +4,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminEventsComponent } from './admin-events/admin-events.component';
+import { AdminAnnouncementComponent } from './admin-announcement/admin-announcement.component';
 
 
 const routes: Routes = [{
@@ -11,6 +12,7 @@ const routes: Routes = [{
   {path:'admin-login',component:AdminLoginComponent},
   { path: 'admin-dashboard', component: AdminDashboardComponent, canActivate: [AuthGuard] }, // ✅ Protected Route
   { path: 'admin-events', component: AdminEventsComponent, canActivate: [AuthGuard] },
+  {path:'admin-announcement',component:AdminAnnouncementComponent,canActivate:[AuthGuard]},
   { path: '**', redirectTo: 'admin-login' }
 ];
 

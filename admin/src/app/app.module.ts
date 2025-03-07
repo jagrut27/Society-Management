@@ -12,11 +12,13 @@ import { HttpClientModule} from '@angular/common/http';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { RouterModule } from '@angular/router';
+import { AdminAnnouncementComponent } from './admin-announcement/admin-announcement.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminDashboardComponent,
+    
    // 
   
   ],
@@ -29,6 +31,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([]) ,
     AdminLoginComponent, 
     AdminEventsComponent, 
+    AdminAnnouncementComponent,
   //  CommonModule
   ],
   providers: [

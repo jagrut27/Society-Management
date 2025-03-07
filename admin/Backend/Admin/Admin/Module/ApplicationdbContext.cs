@@ -6,6 +6,8 @@ namespace Admin.Module
   {
     public ApplicationdbContext (DbContextOptions<ApplicationdbContext> options):base(options) { }
     public DbSet<Events>Events { get; set; }
+    public DbSet<Announcement> Announcement { get; set; }
+    public DbSet <Users> Users { get; set; }
   }
 
-}
+} 

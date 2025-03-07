@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-events',
@@ -15,7 +16,7 @@ export class AdminEventsComponent implements OnInit {
   eventForm: FormGroup;
   editingEvent: any = null;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient,private router:Router ) {
     this.eventForm = this.fb.group({
      event_name: ['', Validators.required],
       description: ['', Validators.required],
@@ -74,7 +75,11 @@ export class AdminEventsComponent implements OnInit {
     console.log(id);
     this.http.delete(`https://localhost:7256/api/Event/${id}`).subscribe(() => {
       this.loadEvents();
-    });
+    });  
+
    
+  }
+  backToDashboard() {
+    this.router.navigate(['/admin-dashboard']); // Ensure this route is correct
   }
 }

@@ -1,0 +1,28 @@
+<h2>Manage Announcements</h2>
+
+<form [formGroup]="announcementForm" (submit)="addAnnouncement(); $event.preventDefault();">
+  <input formControlName="announcement_name" placeholder="Title" required>
+  <textarea formControlName="description" placeholder="Description" required></textarea>
+  <input type="date" formControlName="date" required>
+
+  <button type="submit">Add Announcement</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let announcement of announcements">
+      <td>{{ announcement.announcement_name }}</td>
+      <td>{{ announcement.description }}</td>
+      <td>{{ announcement.date | date:'yyyy-MM-dd' }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="backToDashboard()" class="back-to-dashboard">Back to Dashboard</button>

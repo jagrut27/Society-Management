@@ -20,8 +20,17 @@ export class AdminDashboardComponent {
   goToEvents() {
     this.router.navigate(['/admin-events']);  // ✅ Redirect to Events Page
   }
+
+  backToDashboard(){
+    this.router.navigate(['/admin-dashboard']);
+  }
+  Announcement(){
+    this.router.navigate(['/admin-announcement'])
+  }
+ 
   sidebarOpen: boolean = false; 
   toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
   }
+
 }
