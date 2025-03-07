@@ -1,0 +1,22 @@
+<div class="dashboard" *ngIf="Userprofile as profile">
+
+
+
+
+        <div class="profile-container">
+            <span class="profile-text"><strong >Email:</strong> {{ userEmail }}</span>
+            <span class="profile-text"><strong >Name:</strong> {{ profile.firstname }} {{ profile.lastname }}</span>
+        </div>
+
+        <div class="profile-container1">
+            <p><strong>Phone Number:</strong> {{ profile.phoneNumber }}</p>
+
+            <p><strong>Flat Number:</strong> {{ profile.flatNumber }}</p>
+            <p><strong>Block Number:</strong> {{ profile.blockNumber }}</p>
+        </div>
+       
+     
+
+
+    <button (click)="logout()">Logout</button>
+</div>

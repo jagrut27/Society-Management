@@ -1,0 +1,143 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    margin-top:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262629;
+
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    flex-direction: row;
+    margin-left: 400px;
+    /* margin-top: 5px; */
+}
+/* .rocket-image {
+    background-image: url('/assets/images/society.jpg');
+
+
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 500px;
+} */
+
+
+.rocket-image {
+    background-image: url('/assets/images/society.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 430px;
+    height: 500px;
+}
+
+.left-section {
+    width: 50%;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+}
+
+.right-section {
+    width: 50%;
+    background: linear-gradient(135deg, #3f0d79, #752b91);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
+}
+.right-section h2{
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.input-container {
+    width: 120%;
+    position: relative;
+    margin-bottom: 19px;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input, .input-container select {
+    width: 100%;
+    padding: 12px 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+}
+
+.login-btn {
+    width: 120%;
+    padding: 12px;
+    background: #c71d6f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #9b134d;
+}
+
+.right-section p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+.link {
+    text-decoration: none;
+    color: red;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.link:hover {
+    color: rgb(118, 150, 81); /* Change color to blue on hover */
+    text-decoration: underline; /* Underline the text on hover */
+}
+.error-message {
+    color: #ff4d4d;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}

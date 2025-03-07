@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\data\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\data\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\entity\\members.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\entity\\members.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\data\\imagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\data\\imagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\data\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\data\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit99.prudent\\desktop\\pratham\\.net\\ado.net\\backend\\societymanagement\\entity\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\entity\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ImageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Data\\ImageRepository.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Data\\ImageRepository.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Data\\ImageRepository.cs",
+              "RelativeToolTip": "societymanagement\\Data\\ImageRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T05:28:02.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Entity\\Login.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Entity\\Login.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Entity\\Login.cs",
+              "RelativeToolTip": "societymanagement\\Entity\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T04:17:02.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Data\\LoginRepository.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Data\\LoginRepository.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Data\\LoginRepository.cs",
+              "RelativeToolTip": "societymanagement\\Data\\LoginRepository.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T12:30:47.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "societymanagement\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T05:21:00.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "societymanagement\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFUAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T12:17:56.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Program.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Program.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Program.cs",
+              "RelativeToolTip": "societymanagement\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T11:47:55.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemberRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Data\\MemberRepository.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Data\\MemberRepository.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Data\\MemberRepository.cs",
+              "RelativeToolTip": "societymanagement\\Data\\MemberRepository.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAJEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T11:58:45.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Members.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Entity\\Members.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Entity\\Members.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Entity\\Members.cs",
+              "RelativeToolTip": "societymanagement\\Entity\\Members.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T11:56:30.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Controllers\\ImageController.cs",
+              "RelativeDocumentMoniker": "societymanagement\\Controllers\\ImageController.cs",
+              "ToolTip": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\Controllers\\ImageController.cs",
+              "RelativeToolTip": "societymanagement\\Controllers\\ImageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T05:22:59.111Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+<!-- registration.component.html -->
+
+ <div class="full">
+
+
+<div class="container">
+    <div class="left-section">
+        <h1>Join SocioSync</h1>
+        <p>Register to Become a Member of the Society</p>
+        <div class="rocket-image">
+            <!-- <img src="assets/images/society.jpg" alt="Rocket"> -->
+          </div>
+         
+    </div>
+    <div class="right-section">
+        <h2>SIGN UP</h2>
+        <form id="Registrationform" (ngSubmit)="register()">
+
+            
+          <p id="message" *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input id="firstname" name="firstname" placeholder="First Name" [(ngModel)]="user.firstname" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input id="lastname" name="lastname" placeholder="Last Name" [(ngModel)]="user.lastname" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-envelope"></i>
+                <input id="email" name="email" type="email" placeholder="Email" [(ngModel)]="user.email" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input id="password" name="password" type="password" placeholder="Password" [(ngModel)]="user.password" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" [(ngModel)]="user.confirmPassword" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-phone"></i>
+                <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Phone Number" [(ngModel)]="user.phoneNumber" required>
+            </div>
+      
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input id="flatNumber" name="flatNumber" placeholder="Flat Number" [(ngModel)]="user.flatNumber" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input id="blockNumber" name="blockNumber" placeholder="Block Number" [(ngModel)]="user.blockNumber" required>
+            </div>
+            <button type="submit" class="login-btn">Register</button>
+            <p>Already have an account? <a href="/login" class="link">Login</a></p>
+        </form>
+    </div>
+</div> <div class="bubbles">
+    <div class="bubble" style="width: 40px; height: 40px; left: 20%; animation-duration: 6s;"></div>
+    <div class="bubble" style="width: 50px; height: 50px; left: 40%; animation-duration: 8s;"></div>
+    <div class="bubble" style="width: 30px; height: 30px; left: 60%; animation-duration: 5s;"></div>
+    <div class="bubble" style="width: 70px; height: 70px; left: 80%; animation-duration: 9s;"></div>
+    <div class="bubble" style="width: 60px; height: 60px; left: 10%; animation-duration: 7s;"></div>
+</div>
+</div>

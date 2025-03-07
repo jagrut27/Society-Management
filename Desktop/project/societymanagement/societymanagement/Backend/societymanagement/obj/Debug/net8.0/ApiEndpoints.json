@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "societymanagement.Controllers.HomeController",
+    "Method": "AddMembers",
+    "RelativePath": "api/home/addmembers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "member",
+        "Type": "societymanagement.Entity.Members",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "societymanagement.Controllers.HomeController",
+    "Method": "GetMemberByEmail",
+    "RelativePath": "api/home/by-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "societymanagement.Controllers.HomeController",
+    "Method": "GetAllMembersList",
+    "RelativePath": "api/home/members",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[societymanagement.Entity.Members, societymanagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "societymanagement.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "authenticateuser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "societymanagement.Entity.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,31 @@
+<div class="sidebar">
+    <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+    
+    <ul>
+      <li class="dropdown">
+        <!-- Clicking "View Profile" will navigate to the profile page and open the dropdown -->
+        <a routerLink="/dashboarduser/user-profile" (click)="toggleDropdown()" class="dropbtn">View Profile</a>
+       
+      </li>
+      <li><a routerLink="/events">Events</a></li>
+      <li><a routerLink="/complaints">Complaints</a></li>
+      <li><a routerLink="/dashboarduser/maintenance">Maintenance</a></li>
+    </ul>
+  </div>
+  
+  <!-- Main Content Area -->
+  <div class="dashboard">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Society-Management. All Rights Reserved.</p>
+      <nav class="footer-nav">
+        <a routerLink="/about-us">About Us</a>
+        <a routerLink="/terms-conditions">Terms & Conditions</a>
+      </nav>
+    </div>
+  </footer>
+  
