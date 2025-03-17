@@ -43,18 +43,18 @@
     transition: background 0.3s ease;
   } */
   
-  button:hover {
+  .btn button:hover {
     opacity: 0.9;
   }
   
   /* View Profile Button */
-  button:first-of-type {
-    background: #007bff;
+  .btn button:first-of-type {
+    background: #dc3545;
     color: white;
   }
   
   /* Logout Button */
-  button:last-of-type {
+  .btn button:last-of-type {
     background: #dc3545;
     color: white;
   }
@@ -69,9 +69,9 @@
       font-size: 14px;
     }
   
-    button {
+    .btn button {
       width: 100%;
-      padding: 12px;
+      padding: 15px;
     }
   }
 
@@ -94,7 +94,7 @@
 }
 
 /* Button Styling */
-button {
+.btn button {
     margin-top: 15px;
     padding: 12px 18px;
     font-size: 18px;
@@ -102,6 +102,7 @@ button {
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-right: 40px;
 }
 
 /* Profile Container - Align Email & Name */
@@ -136,6 +137,31 @@ button {
     font-weight: normal; /* Ensure values are normal weight */
     margin: 5px 0; /* Spacing */
 }
+.profile-img {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures proper scaling */
+  border: 3px solid #4CAF50; /* Green border for aesthetics */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  display: block;
+  margin: 20px auto; /* Center the image */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.profile-img:hover {
+  transform: scale(1.1); /* Slight zoom-in on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 
 
 

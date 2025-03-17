@@ -1,0 +1,84 @@
+.payment-container {
+    max-width: 550px;
+    margin: 70px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .payment-container:hover {
+    transform: scale(1.02);
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .form-control-file {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .breakdown-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .breakdown-list li {
+    background: #ecf0f1;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .btn-success {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #28a745;
+    color: white;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .btn-success:hover {
+    background: #218838;
+    transform: scale(1.05);
+  }
+  

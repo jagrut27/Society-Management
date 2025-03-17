@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "societymanagement.Controllers.ComplainController",
+    "Method": "AddComplain",
+    "RelativePath": "api/complain/addcomplain",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "complain",
+        "Type": "societymanagement.Entity.Complain",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "societymanagement.Controllers.HomeController",
     "Method": "AddMembers",
     "RelativePath": "api/home/addmembers",
@@ -33,6 +49,38 @@
   },
   {
     "ContainingType": "societymanagement.Controllers.HomeController",
+    "Method": "FetchMemberById",
+    "RelativePath": "api/home/by-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "societymanagement.Controllers.HomeController",
+    "Method": "DeleteMember",
+    "RelativePath": "api/home/DeleteProfile",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "societymanagement.Controllers.HomeController",
     "Method": "GetAllMembersList",
     "RelativePath": "api/home/members",
     "HttpMethod": "GET",
@@ -50,6 +98,62 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "societymanagement.Controllers.HomeController",
+    "Method": "UpdateMember",
+    "RelativePath": "api/home/updateprofile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "MemberId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MemberId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Firstname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lastname",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FlatNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BlockNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "societymanagement.Controllers.LoginController",

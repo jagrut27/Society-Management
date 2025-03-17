@@ -19,7 +19,7 @@ BEGIN
     SELECT * FROM Members;		
 END;
 
-exec sp_GetMembers1;	
+      exec sp_GetMembers1;	
 
 --count email strored procured with using multiple email not stored in database
  create procedure sp_countmemnber1
@@ -91,15 +91,24 @@ alter procedure sp_getuserbyemail
 		@Email NVARCHAR(255)
 as 
 begin
-		select MemberId,Firstname,Lastname,PhoneNumber,Gender,FlatNumber,BlockNumber from Members where Email=@Email;
+		select MemberId,Firstname,Lastname,PhoneNumber,FlatNumber,BlockNumber,ImageURL from Members where Email=@Email;
 end;
 
 
-exec sp_getuserbyemail @Email="smit15@gmail.com";
+exec sp_getuserbyemail @Email="Prathamlimbachiya15@gmail.com";
 
 
+create procedure sp_FetchALldataAfterUpdate
+  @Member_Id int
+as
+begin
+  select MemberId,Firstname,Lastname,PhoneNumber,FlatNumber,BlockNumber,ImageURL from Members where MemberId=@Member_Id;
+end;
 
-INSERT INTO Members (Firstname, Lastname, Email, Password, PhoneNumber, Gender, FlatNumber, BlockNumber)
+exec sp_FetchALldataAfterUpdate @Member_id=10018
+
+
+INSERT INTO Members (Firstname, Lastname, Email, Password, PhoneNumber, FlatNumber, BlockNumber)
 VALUES
 ('John', 'Doe', 'john.doe@example.com', 'hashedpassword123', '123-456-7890', 'Male', '101', 'Block A'),
 ('Jane', 'Smith', 'jane.smith@example.com', 'hashedpassword456', '987-654-3210', 'Female', '102', 'Block B'),
@@ -117,25 +126,89 @@ delete from Members where MemberId=2007;
 --this image upload api
 
 
-	alter procedure sp_imageupload
-		@MemberId int,
-		@imageurl varchar(255)
-	as
-	begin
-		update Members set ImageURL=@imageurl where MemberId=@MemberId;	
-	end;
+	--alter procedure sp_imageupload
+	--	@MemberId int,
+	--	@imageurl varchar(255)
+	--as
+--	begin
+	--	update Members set ImageURL=@imageurl where MemberId=@MemberId;	
+	--end;
 
-exec sp_imageupload @MemberId=2008,@imageurl='C:\Users\pcit99.PRUDENT\Desktop\pratham\.net\ado.net\societymanagement\societymanagement\firstimage.jpg';
+--exec sp_imageupload @MemberId=2008,@imageurl='C:\Users\pcit99.PRUDENT\Desktop\pratham\.net\ado.net\societymanagement\societymanagement\firstimage.jpg';
 
 --select * from Members as m join imageupload as i on m.memberid = i.memberid;	
 
 
-	create procedure sp_imageget
-	as
-	begin
-		select MemberId,ImageURL from Members;
-	end;
+	--create procedure sp_imageget
+	--as
+--		select MemberId,ImageURL from Members;
+	--end;
 
-	exec sp_imageget;	
+--	exec sp_imageget;
+
+
+alter PROCEDURE sp_UpdateProfile
+  @MemberId INT,
+   @Firstname VARCHAR(100),        
+   @Lastname VARCHAR(100),            
+   --@Email VARCHAR(255),               
+   --@Password VARCHAR(255),       
+   @PhoneNumber VARCHAR(15),    
+   @FlatNumber VARCHAR(50),         
+   @BlockNumber VARCHAR(50) ,
+   @imageurl varchar(255)
+AS
+BEGIN
+      UPDATE Members
+        SET 
+            Firstname = @Firstname,
+            Lastname = @Lastname,
+           -- Email = @Email,
+           -- Password = @Password,
+            PhoneNumber = @PhoneNumber,
+            FlatNumber = @FlatNumber,
+            BlockNumber = @BlockNumber,
+           ImageURL=@imageurl
+
+    WHERE MemberId = @MemberId;
+END;
+
+EXEC sp_UpdateProfile 
+    @MemberId = 8005, 
+    @Firstname = 'Johncxcxcxcxc', 
+    @Lastname = 'Doe34545', 
+    @Email = 'johndoe@example.com', 
+    @Password = 'SecurePass123', 
+    @PhoneNumber = '9876543210', 
+    @FlatNumber = 'A-101', 
+    @BlockNumber = 'M'
+    --@imageurl='C:\Users\pcit99.PRUDENT\Desktop\pratham\.net\ado.net\societymanagement\societymanagement\firstimage.jpg';
+
+CREATE TABLE Complaints (
+    complaints_id INT IDENTITY(1,1) PRIMARY KEY,
+    member_id INT NOT NULL,
+    Title VARCHAR(50) NOT NULL,
+    Description VARCHAR(100) NOT NULL,
+    Status VARCHAR(20) NOT NULL DEFAULT 'pending' CHECK (Status IN ('pending', 'resolved')),
+    created_at DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (member_id) REFERENCES Members(MemberId));
+
+  select * from Complaints;
+
+
+  selectc.member_id, m.Firstname,m.Lastname,m.FlatNumber,m.BlockNumber, c.Title,c.Description,c.Status,c.created_at from Members as m join Complaints as c on m.MemberId=c.member_id;
+
+
+alter procedure sp_InsertComplain
+          @Memberid int,
+          @Title varchar(50),
+          @Description varchar(50)
+as
+begin
+      insert into Complaints(member_id,Title,Description)values(@Memberid,@Title,@Description);
+
+end;
+
+exec sp_InsertComplain @Memberid=10018,@Title='Broken Streetlight',@Description='The streetlight near my building is not working.';
 
 

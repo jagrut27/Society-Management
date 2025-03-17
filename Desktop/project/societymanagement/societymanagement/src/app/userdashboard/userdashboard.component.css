@@ -32,6 +32,7 @@
     padding: 10px;
     border-radius: 5px;
     transition: 0.3s;
+    font-size: 30px;
   }
   
   .sidebar ul li a:hover {

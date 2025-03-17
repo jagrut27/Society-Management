@@ -1161,11 +1161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\societymanagement.csproj",
+      "projectUniqueName": "C:\\Users\\pcit99.PRUDENT\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj",
       "projectName": "societymanagement",
-      "projectPath": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\societymanagement.csproj",
+      "projectPath": "C:\\Users\\pcit99.PRUDENT\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj",
       "packagesPath": "C:\\Users\\pcit99.PRUDENT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\obj\\",
+      "outputPath": "C:\\Users\\pcit99.PRUDENT\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

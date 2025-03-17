@@ -1,14 +1,14 @@
 <div class="sidebar">
-    <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+    <!-- <button class="toggle-btn" (click)="toggleSidebar()">☰</button> -->
     
     <ul>
       <li class="dropdown">
         <!-- Clicking "View Profile" will navigate to the profile page and open the dropdown -->
-        <a routerLink="/dashboarduser/user-profile" (click)="toggleDropdown()" class="dropbtn">View Profile</a>
+        <a routerLink="/dashboarduser/user-profile"  class="dropbtn">View Profile</a>
        
       </li>
       <li><a routerLink="/events">Events</a></li>
-      <li><a routerLink="/complaints">Complaints</a></li>
+      <li><a routerLink="/dashboarduser/complaints">Complaints</a></li>
       <li><a routerLink="/dashboarduser/maintenance">Maintenance</a></li>
     </ul>
   </div>

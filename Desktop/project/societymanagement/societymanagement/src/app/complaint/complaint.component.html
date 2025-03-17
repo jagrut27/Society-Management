@@ -1,0 +1,14 @@
+
+<form id="content" (ngSubmit)="submitComplaint()">
+
+    <h2 style="text-decoration: underline;font-size: 50px;">Submit  Complaint</h2>
+    <div class="underline"></div> <!-- Custom line inside the form -->
+
+  <label for="title">Title:</label>
+  <input type="text" id="title" [(ngModel)]="complaintData.title" name="title" required />
+
+  <label for="description">Description:</label>
+  <textarea id="description" [(ngModel)]="complaintData.description" name="description" required></textarea>
+
+  <button type="submit">Submit Complaint</button>
+</form>

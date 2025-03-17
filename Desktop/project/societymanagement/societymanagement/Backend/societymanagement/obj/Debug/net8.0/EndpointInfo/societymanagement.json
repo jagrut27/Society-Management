@@ -5,6 +5,37 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/complain/addcomplain": {
+      "post": {
+        "tags": [
+          "Complain"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Complain"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Complain"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Complain"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/home/members": {
       "get": {
         "tags": [
@@ -95,6 +126,135 @@
         }
       }
     },
+    "/api/home/DeleteProfile": {
+      "delete": {
+        "tags": [
+          "Home"
+        ],
+        "parameters": [
+          {
+            "name": "memberid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/home/updateprofile": {
+      "put": {
+        "tags": [
+          "Home"
+        ],
+        "parameters": [
+          {
+            "name": "MemberId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "MemberId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Firstname": {
+                    "type": "string"
+                  },
+                  "Lastname": {
+                    "type": "string"
+                  },
+                  "PhoneNumber": {
+                    "type": "string"
+                  },
+                  "FlatNumber": {
+                    "type": "string"
+                  },
+                  "BlockNumber": {
+                    "type": "string"
+                  },
+                  "ImageUrl": {
+                    "type": "string"
+                  },
+                  "ImageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "MemberId": {
+                  "style": "form"
+                },
+                "Firstname": {
+                  "style": "form"
+                },
+                "Lastname": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                },
+                "FlatNumber": {
+                  "style": "form"
+                },
+                "BlockNumber": {
+                  "style": "form"
+                },
+                "ImageUrl": {
+                  "style": "form"
+                },
+                "ImageFile": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/home/by-id": {
+      "get": {
+        "tags": [
+          "Home"
+        ],
+        "parameters": [
+          {
+            "name": "memberid",
+            "in": "header",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/authenticateuser": {
       "post": {
         "tags": [
@@ -129,6 +289,24 @@
   },
   "components": {
     "schemas": {
+      "Complain": {
+        "type": "object",
+        "properties": {
+          "memberId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Login": {
         "type": "object",
         "properties": {

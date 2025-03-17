@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace societymanagement.Entity
 {
@@ -13,5 +13,9 @@ namespace societymanagement.Entity
     
         public string FlatNumber { get; set; }
         public string BlockNumber { get; set; }
-    }
+
+    //public String ImageUrl { get; set; }
+
+    //public IFormFile ImageFile { get; set; }
+  }
 }

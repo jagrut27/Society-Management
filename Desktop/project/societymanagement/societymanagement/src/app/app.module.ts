@@ -20,7 +20,11 @@ import { AuthService } from './auth.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
-import { UserProfileComponent } from './user-profile/user-profile.component'; 
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ComplaintComponent } from './complaint/complaint.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,12 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     HomeComponent,
     LoginComponent,
     UserdashboardComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    EditProfileComponent,
+    MaintenanceComponent,
+    ForgetPasswordComponent,
+    ComplaintComponent,
+
 
   ],
   imports: [

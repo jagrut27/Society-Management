@@ -1,7 +1,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using societymanagement.Controllers;
+using Microsoft.Extensions.FileProviders;
+
 using societymanagement.Data;
 
 
@@ -10,15 +10,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<MemberRepository>();
 builder.Services.AddScoped<LoginRepository>();
-//builder.Services.AddScoped<ImageRepository>();
+//builder.Services.AddScoped<ImageController>();
 
-//builder.Services.AddScoped<LoginController>();
+
+builder.Services.AddScoped<ComplainRepsitory>();
+
 
 
 
@@ -37,9 +38,10 @@ builder.Services.AddCors(options =>
 });
 
 
+      
 
 
-//var key = Encoding.UTF8.GetBytes("ThisIsASecretKeyForJWTAuthentication"); // Use a secure key
+
 
 
 
@@ -49,8 +51,14 @@ var app = builder.Build();
 app.UseCors("AllowAngularApp");
 
 
+app.UseStaticFiles(new StaticFileOptions
+{
+  FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "imageupload")),
+  RequestPath = "/imageupload"
+});
 
-//app.UseCors("AllowAngularApp");
+
+
 
 
 // Configure the HTTP request pipeline.

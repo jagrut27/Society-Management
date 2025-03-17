@@ -157,4 +157,14 @@ html, body {
     color: rgb(137, 219, 70); /* Change color to blue on hover */
     text-decoration: underline; /* Underline the text on hover */
 }
+.timer-message{
+
+    color: #ff4d4d;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
 

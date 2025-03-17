@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using societymanagement.Data;
 using societymanagement.Entity;
 
@@ -24,25 +24,15 @@ namespace societymanagement.Controllers
             {
                 string result = _repository.AuthenticateUser(login.Email, login.Password);
 
-                if (login == null || string.IsNullOrEmpty(login.Email) || string.IsNullOrEmpty(login.Password))
-                {
-                    return BadRequest(new { success = false, message = "Email and Password are required" });  
-                }
-
-                //else if (result == "Login Successfully")
-                //{
-                //    return Ok(new { success = true, message = result });  
-                //}
-
-                //return Unauthorized(new { success = false, message = result });  
+         
 
                 if (result == "Invalid Password")
                 {
-                    return Unauthorized(new { success = false, message = "Invalid Password" });
+                    return Ok(new { success = false, message = "Invalid Password" });
                 }
                 else if (result == "User not found")
                 {
-                    return Unauthorized(new { success = false, message = "User not found" });
+                    return Ok(new { success = false, message = "User not found" });
                 }
                 else
                 {

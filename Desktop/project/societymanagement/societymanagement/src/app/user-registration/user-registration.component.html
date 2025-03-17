@@ -14,7 +14,7 @@
     </div>
     <div class="right-section">
         <h2>SIGN UP</h2>
-        <form id="Registrationform" (ngSubmit)="register()">
+        <form id="Registrationform"(ngSubmit) ="register()">
 
             
           <p id="message" *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
@@ -56,11 +56,5 @@
             <p>Already have an account? <a href="/login" class="link">Login</a></p>
         </form>
     </div>
-</div> <div class="bubbles">
-    <div class="bubble" style="width: 40px; height: 40px; left: 20%; animation-duration: 6s;"></div>
-    <div class="bubble" style="width: 50px; height: 50px; left: 40%; animation-duration: 8s;"></div>
-    <div class="bubble" style="width: 30px; height: 30px; left: 60%; animation-duration: 5s;"></div>
-    <div class="bubble" style="width: 70px; height: 70px; left: 80%; animation-duration: 9s;"></div>
-    <div class="bubble" style="width: 60px; height: 60px; left: 10%; animation-duration: 7s;"></div>
-</div>
+</div> 
 </div>

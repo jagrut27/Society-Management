@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService, userProfile } from '../auth.service'; // Make sure the AuthService is correctly imported
+import { AuthService } from '../auth.service'; // Make sure the AuthService is correctly imported
 
 @Component({
   selector: 'app-userdashboard',
@@ -27,18 +27,8 @@ export class UserdashboardComponent implements OnInit {
 
 
 
-  toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
-  }
 
-  toggleSidebar() {
-    this.isClosed = !this.isClosed;
-  }
 
-  navigateToProfile() {
-    this.router.navigate(['/dashboarduser/user-profile']); // Navigate to the profile page
-    this.isDropdownOpen = true; // Open the dropdown menu
-  }
 
   
 

@@ -4,6 +4,9 @@
 
 
         <div class="profile-container">
+
+            <img *ngIf="Userprofile?.imageURL" [src]="Userprofile.imageURL" alt="Profile Image" class="profile-img" />
+
             <span class="profile-text"><strong >Email:</strong> {{ userEmail }}</span>
             <span class="profile-text"><strong >Name:</strong> {{ profile.firstname }} {{ profile.lastname }}</span>
         </div>
@@ -17,6 +20,15 @@
        
      
 
+        <div class="btn">
+            <button (click)="logout()">Logout</button>
+            
+            <button (click)="Edit_profile()" style="background: #dc3545;   color: white;">Edit</button>
 
-    <button (click)="logout()">Logout</button>
+            <button (click)="delete_profile()" style="background: #dc3545;">Delete</button>
+
+
+        </div>
+
+
 </div>

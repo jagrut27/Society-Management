@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U+HijNEWFso=",
+  "dgSpecHash": "Fyc+8GsC/8Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pcit99.PRUDENT\\Desktop\\pratham\\.net\\ado.net\\Backend\\societymanagement\\societymanagement.csproj",
+  "projectFilePath": "C:\\Users\\pcit99.PRUDENT\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pcit99.PRUDENT\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pcit99.PRUDENT\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.12\\microsoft.aspnetcore.authentication.jwtbearer.8.0.12.nupkg.sha512",
