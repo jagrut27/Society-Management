@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Society Members</h2>
+    <div class="table-scroll-container" #tableScrollContainer> 
+      <table border="1" #memberTable>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Block Number</th>
+            <th>Flat Number</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let member of members">
+              <td>{{ member.memberId }}</td>
+              <td>{{ member.firstname }}</td>
+              <td>{{ member.lastname }}</td>
+              <td>{{ member.email }}</td>
+              <td>{{ member.phoneNumber }}</td>
+              <td>{{ member.blockNumber }}</td>  
+              <td>{{ member.flatNumber }}</td>
+              <td>
+                <button (click)="deleteMember(member.memberId)" class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+          
+          
+      </table>
+    </div>
+    <br>
+    <br>
+    <button (click)="backToDashboard()">Back to Dashboard</button>
+</div>

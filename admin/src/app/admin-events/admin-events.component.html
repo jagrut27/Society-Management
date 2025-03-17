@@ -1,0 +1,42 @@
+<h2>Manage Events</h2>
+
+<form [formGroup]="eventForm">
+    <input formControlName="event_name" placeholder="Event Name" required>
+    <textarea formControlName="description" placeholder="Event Description" required></textarea>
+    <input type="text" formControlName="place" placeholder="Event Place" required>
+    <input type="date" formControlName="event_date" required>
+    <input type="time" formControlName="event_time" required>
+
+    <button (click)="editingEvent ? updateEvent() : addEvent()">
+        {{ editingEvent ? 'Update Event'  : 'Add Event' }}
+    </button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Event Name</th>
+            <th>Description</th>
+            <th>Place</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of events">
+            <td>{{ event.event_name }}</td>
+            <td>{{ event.description }}</td>
+            <td>{{event.place}}</td>
+            <td>{{ event.event_date }}</td>
+            <td>{{ event.event_time }}</td>
+            <td>
+                <button (click)="editEvent(event)">Edit</button>
+                <button (click)="deleteEvent(event.event_id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="backToDashboard()" class="back-to-dashboard">Back to Dashboard</button>
+
+<!--<a href="admin\src\app\admin-dashboard\admin-dashboard.component.html" </a> --> 

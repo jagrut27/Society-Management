@@ -1,0 +1,37 @@
+<h2>Manage Announcements</h2>
+
+<!-- Announcement Form -->
+<form [formGroup]="announcementForm" (ngSubmit)="editingAnnouncement ? editAnnouncement() : addAnnouncement(); $event.preventDefault();">
+  <input formControlName="announcement_name" placeholder="Title" required>
+  <textarea formControlName="description" placeholder="Description" required></textarea>
+  <input type="date" formControlName="date" required>
+
+  <button type="submit">{{ editingAnnouncement ? 'Update' : 'Add' }} Announcement</button>
+
+</form>
+
+<!-- Announcements Table -->
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let announcement of announcements">
+      <td>{{ announcement.announcement_name }}</td>
+      <td>{{ announcement.description }}</td>
+      <td>{{ announcement.date | date:'yyyy-MM-dd' }}</td>
+      <td>
+        <button (click)="startEditing(announcement)">Edit</button>
+        <button (click)="deleteAnnouncement(announcement.announcement_id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Back to Dashboard Button -->
+<button (click)="backToDashboard()" class="back-to-dashboard">Back to Dashboard</button>
