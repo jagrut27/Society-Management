@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Member Complaints</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Complaint ID</th>
+          <th>Member ID</th>
+          <th>Member Name</th>
+          <th>Flat Number</th>
+          <th>Block Number</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let complaint of complaints">
+          <td>{{ complaint.complaintID }}</td>
+          <td>{{ complaint.memberName }}</td>
+          <td>{{ complaint.description }}</td>
+          <td>{{ complaint.status }}</td>
+          <td>
+            <button (click)="updateStatus(complaint.complaintID, 'Resolved')" class="btn btn-success" 
+                    *ngIf="complaint.status === 'Pending'">
+              Mark as Resolved
+            </button>
+            <button (click)="deleteComplaint(complaint.complaintID)" class="btn btn-danger">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="backToDashboard()" class="back-to-dashboard">Back to Dashboard</button>
+
+  </div>
+  

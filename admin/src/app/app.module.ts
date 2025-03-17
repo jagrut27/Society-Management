@@ -13,11 +13,15 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { RouterModule } from '@angular/router';
 import { AdminAnnouncementComponent } from './admin-announcement/admin-announcement.component';
+import { AdminMembersComponent } from './admin-members/admin-members.component';
+import { AdminComplaintsComponent } from './admin-complaints/admin-complaints.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminDashboardComponent,
+    AdminMembersComponent,
+    
     
    // 
   
@@ -32,6 +36,8 @@ import { AdminAnnouncementComponent } from './admin-announcement/admin-announcem
     AdminLoginComponent, 
     AdminEventsComponent, 
     AdminAnnouncementComponent,
+    AdminComplaintsComponent,
+    
   //  CommonModule
   ],
   providers: [

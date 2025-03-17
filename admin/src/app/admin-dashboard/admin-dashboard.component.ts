@@ -20,12 +20,17 @@ export class AdminDashboardComponent {
   goToEvents() {
     this.router.navigate(['/admin-events']);  // ✅ Redirect to Events Page
   }
-
+  goToComplaints(){
+    this.router.navigate(['/admin-complaints']);
+  }
   backToDashboard(){
     this.router.navigate(['/admin-dashboard']);
   }
   Announcement(){
     this.router.navigate(['/admin-announcement'])
+  }
+  goToMembers(){
+    this.router.navigate(['/admin-members']);
   }
  
   sidebarOpen: boolean = false; 

@@ -5,6 +5,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AuthGuard } from './guards/auth.guard';
 import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { AdminAnnouncementComponent } from './admin-announcement/admin-announcement.component';
+import { AdminMembersComponent } from './admin-members/admin-members.component';
+import { AdminComplaintsComponent } from './admin-complaints/admin-complaints.component';
 
 
 const routes: Routes = [{
@@ -13,8 +15,10 @@ const routes: Routes = [{
   { path: 'admin-dashboard', component: AdminDashboardComponent, canActivate: [AuthGuard] }, // ✅ Protected Route
   { path: 'admin-events', component: AdminEventsComponent, canActivate: [AuthGuard] },
   {path:'admin-announcement',component:AdminAnnouncementComponent,canActivate:[AuthGuard]},
-  { path: '**', redirectTo: 'admin-login' }
-];
+  {path:'admin-members',component:AdminMembersComponent,canActivate:[AuthGuard]},
+  {path:'admin-complaints',component:AdminComplaintsComponent},
+  { path: '**', redirectTo: 'admin-login' },
+];  
 
 
 @NgModule({
