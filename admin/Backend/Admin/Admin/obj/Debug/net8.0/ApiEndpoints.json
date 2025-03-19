@@ -79,6 +79,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Admin.Controllers.ComplaintsController",
+    "Method": "GetComplaints",
+    "RelativePath": "api/Complaints",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Admin.Controllers.ComplaintsController",
+    "Method": "DeleteComplaint",
+    "RelativePath": "api/Complaints/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Admin.Controllers.ComplaintsController",
+    "Method": "UpdateComplaintStatus",
+    "RelativePath": "api/Complaints/UpdateComplaintStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "UpdateComplaint",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Admin.Controllers.EventController",
     "Method": "GetEvents",
     "RelativePath": "api/Event",

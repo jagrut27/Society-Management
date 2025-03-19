@@ -38,18 +38,17 @@ export class AdminMembersComponent implements OnInit, AfterViewInit {
       }
     );
   }
-
   deleteMember(id: number): void {
     if (confirm('Are you sure you want to delete this member?')) {
-      this.http.delete(`https://localhost:7256/api/Members/${id}`).subscribe(
-        () => {
-          alert('Member deleted successfully.');
-          this.members = this.members.filter(member => member.MemberId !== id);
+      this.http.delete(`https://localhost:7256/api/Members/${id}`).subscribe({
+        next: () => {
+          // Remove deleted member instantly from the screen
+          this.members = [...this.members.filter(member => member.MemberId !== id)];
         },
-        error => {
+        error: (error) => {
           console.error('Error deleting member:', error);
         }
-      );
+      });
     }
   }
 

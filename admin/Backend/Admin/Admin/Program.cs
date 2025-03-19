@@ -6,16 +6,27 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
+/*
 builder.Services.AddCors(options =>
 {
   options.AddPolicy(name: MyAllowSpecificOrigins,
       policy =>
       {
-        policy.WithOrigins("http://localhost:4200") // Allow Angular frontend
+        policy.WithOrigins("http://localhost:64121") // Allow Angular frontend
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials();
+      });
+}); */
+
+builder.Services.AddCors(options =>
+{
+  options.AddPolicy("AllowAllOrigins",
+      policy =>
+      {
+        policy.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
       });
 });
 
@@ -33,7 +44,7 @@ builder.Services.AddSingleton<EmailService>();
 var app = builder.Build();
 
 // Apply CORS policy
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors("AllowAllOrigins");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

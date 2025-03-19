@@ -13,7 +13,7 @@ namespace societymanagement.Data
     {
       try
       {
-        string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=societymanagement;Integrated Security=True;TrustServerCertificate=True;";
+        string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=societymanagement_new;Integrated Security=True;TrustServerCertificate=True;";
         _connection = new SqlConnection(connectionString);
         _connection.Open();  // Test connection
         Console.WriteLine("Database connection successful!");

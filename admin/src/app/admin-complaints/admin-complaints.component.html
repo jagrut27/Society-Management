@@ -16,19 +16,28 @@
       </thead>
       <tbody>
         <tr *ngFor="let complaint of complaints">
-          <td>{{ complaint.complaintID }}</td>
-          <td>{{ complaint.memberName }}</td>
-          <td>{{ complaint.description }}</td>
-          <td>{{ complaint.status }}</td>
+          <td>{{ complaint.complaints_id }}</td>
+          <td>{{complaint.member_id}}</td>
+          <td>{{ complaint.firstname }} {{complaint.lastname}}</td>
+          <td>{{complaint.flatNumber}}</td>
+          <td>{{complaint.blockNumber}}</td>
+          <td>{{complaint.title}}</td>
+          <td>{{complaint.description }}</td>
           <td>
-            <button (click)="updateStatus(complaint.complaintID, 'Resolved')" class="btn btn-success" 
-                    *ngIf="complaint.status === 'Pending'">
-              Mark as Resolved
+            {{ complaint?.status }}
+          </td>
+          <td>
+            <button (click)="toggleStatus(complaint)" 
+                    [ngClass]="{'btn-resolved': complaint?.status?.trim().toLowerCase() === 'pending', 
+                                'btn-pending': complaint?.status?.trim().toLowerCase() === 'resolved'}"
+                    class="btn">
+              {{ complaint?.status?.trim().toLowerCase() === 'pending' ? 'Mark as Resolved' : 'Mark as Pending' }}
             </button>
-            <button (click)="deleteComplaint(complaint.complaintID)" class="btn btn-danger">
+        
+          <button (click)="deleteComplaint(complaint.complaints_id)" class="btn btn-danger">
               Delete
             </button>
-          </td>
+         </td>
         </tr>
       </tbody>
     </table>

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:societymanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:societymanagement.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "societymanagement.csproj",
+              "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj",
+              "RelativeDocumentMoniker": "societymanagement.csproj",
+              "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj",
+              "RelativeToolTip": "societymanagement.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-18T04:25:37.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "societymanagement.csproj.user",
+              "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj.user",
+              "RelativeDocumentMoniker": "societymanagement.csproj.user",
+              "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\societymanagement.csproj.user",
+              "RelativeToolTip": "societymanagement.csproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-03-18T04:25:34.373Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

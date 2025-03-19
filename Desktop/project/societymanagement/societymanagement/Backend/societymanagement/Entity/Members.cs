@@ -14,6 +14,8 @@ namespace societymanagement.Entity
         public string FlatNumber { get; set; }
         public string BlockNumber { get; set; }
 
+      public string role { get; set; }
+
     //public String ImageUrl { get; set; }
 
     //public IFormFile ImageFile { get; set; }

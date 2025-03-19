@@ -10,8 +10,10 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  
   { path: 'user-registration', component: UserRegistrationComponent },
   { path: 'login', component: LoginComponent },
   
@@ -20,6 +22,7 @@ const routes: Routes = [
       { path: 'maintenance', component: MaintenanceComponent },
       { path: 'user-profile', component: UserProfileComponent },
       { path: 'complaints', component: ComplaintComponent },
+ //     {path:'admin-login',component:AdminloginComponent}
 
     ]
   },

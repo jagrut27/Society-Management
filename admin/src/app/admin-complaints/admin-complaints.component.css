@@ -68,13 +68,10 @@ button:hover {
 }
 
 .btn-success:hover {
-    background-color: #28b463;
+    background-color: #2980b9;
 }
 
-.btn-danger {
-    background-color: #e74c3c;
-    color: white;
-}
+
 
 .btn-danger:hover {
     background-color: #c62828;
@@ -147,3 +144,26 @@ form button:hover {
 .back-to-dashboard:hover {
     background-color: #34495e;
 }
+
+.btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .btn-resolved {
+    background-color: #3498db;
+    color: white;
+  }
+  .btn-pending{
+    background-color:#2ecc71;
+    color: white;
+  } 
+  
+  .btn-danger {
+    background-color: red;
+    color: white;
+  }
+  

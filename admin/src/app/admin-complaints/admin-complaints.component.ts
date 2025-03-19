@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class AdminComplaintsComponent implements OnInit {
   complaints: any[] = [];
  // router: any;
+   apiUrl='https://localhost:7256/api/Complaints/UpdateComplaintStatus';
 
   constructor(private http: HttpClient, private router:Router ) {}
 
@@ -20,27 +21,49 @@ export class AdminComplaintsComponent implements OnInit {
   }
 
   loadComplaints() {
-    this.http.get<any[]>('http://localhost:5000/api/complaints')
+   
+    this.http.get<any[]>('https://localhost:7256/api/Complaints')
+   
       .subscribe(data => {
         this.complaints = data;
       });
+      console.log("Complaints are",this.complaints);
   }
 
-  updateStatus(id: number, newStatus: string) {
-    this.http.put(`http://localhost:5000/api/complaints/${id}`, { status: newStatus })
+  updateStatus(complaintId: number, newStatus: string) {
+    this.http.put(`https://localhost:7256/api/Complaints/${complaintId}`, { status: newStatus })
       .subscribe(() => {
-        this.loadComplaints(); // Refresh data
+        console.log(`Complaint ${complaintId} updated to ${newStatus}`);
+        this.complaints = this.complaints.map(complaint =>
+          complaint.complaints_id === complaintId ? { ...complaint, status: newStatus } : complaint
+        );
+      }, error => {
+        console.error('Error updating status:', error);
       });
   }
+  
 
   deleteComplaint(id: number) {
+    console.log(id);
     if (confirm('Are you sure you want to delete this complaint?')) {
-      this.http.delete(`http://localhost:5000/api/complaints/${id}`)
+      this.http.delete(`https://localhost:7256/api/Complaints/${id}`)
+      
         .subscribe(() => {
           this.loadComplaints(); // Refresh data
+        
         });
     }
   }
+  toggleStatus(complaint: any) {
+    const newStatus = complaint.status.trim().toLowerCase() === 'pending' ? 'Resolved' : 'Pending';
+
+    this.http.put(this.apiUrl, { complaints_id: complaint.complaints_id, status: newStatus }).subscribe(response => {
+      // If update is successful, change status in UI
+      complaint.status = newStatus;
+    });
+  }
+  
+
   backToDashboard() {
     this.router.navigate(['/admin-dashboard']); // Ensure this route is correct
   }
