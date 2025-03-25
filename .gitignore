@@ -4,6 +4,8 @@ obj/
 *.bak
 *.mdf
 *.ldf
+*.mdf
+*.ldf
 
 "node_modules/" 
 ".angular/" 

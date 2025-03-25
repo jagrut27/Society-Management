@@ -10,14 +10,8 @@ namespace societymanagement.Entity
         public string Email { get; set; }
         public string Password { get; set; }  // Consider hashing passwords before storing
         public string PhoneNumber { get; set; }
-    
         public string FlatNumber { get; set; }
         public string BlockNumber { get; set; }
-
-      public string role { get; set; }
-
-    //public String? ImageUrl { get; set; }
-
-    //public IFormFile ImageFile { get; set; }
-  }
+        public string Role { get; set; }  // Fixed casing for consistency
+    }
 }
