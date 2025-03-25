@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 })
 export class AdminMembersComponent implements OnInit, AfterViewInit {
   members: any[] = [];
-  @ViewChild('memberTable', { static: false })
-  memberTable!: ElementRef;
-  @ViewChild('tableScrollContainer', { static: false })
-  tableScrollContainer!: ElementRef;
+  totalMembers: number | undefined;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  @ViewChild('memberTable', { static: false }) memberTable!: ElementRef;
+  @ViewChild('tableScrollContainer', { static: false }) tableScrollContainer!: ElementRef;
+  
+
+  constructor(private http: HttpClient, private router: Router, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.getMembers();
@@ -38,12 +39,14 @@ export class AdminMembersComponent implements OnInit, AfterViewInit {
       }
     );
   }
+
   deleteMember(id: number): void {
     if (confirm('Are you sure you want to delete this member?')) {
       this.http.delete(`https://localhost:7256/api/Members/${id}`).subscribe({
         next: () => {
-          // Remove deleted member instantly from the screen
-          this.members = [...this.members.filter(member => member.MemberId !== id)];
+          this.members = this.members.filter(member => member.memberId !== id);
+          this.cdr.detectChanges(); 
+          this.updateTotalMembers();
         },
         error: (error) => {
           console.error('Error deleting member:', error);
@@ -51,20 +54,28 @@ export class AdminMembersComponent implements OnInit, AfterViewInit {
       });
     }
   }
+  updateTotalMembers(): void {
+    this.http.get<{ totalMembers: number }>('https://localhost:7256/api/Members/count').subscribe(
+      data => {
+        this.totalMembers = data.totalMembers;
+      },
+      error => {
+        console.error('Error updating total members:', error);
+      }
+  );
+}
 
   backToDashboard() {
     this.router.navigate(['/admin-dashboard']);
   }
 
-  setupManualScrolling(): void {
-    // No need for cloning rows or setInterval
-  }
+  setupManualScrolling(): void {}
 
   @HostListener('wheel', ['$event'])
   onMouseWheel(event: WheelEvent): void {
     if (this.tableScrollContainer) {
       this.tableScrollContainer.nativeElement.scrollTop += event.deltaY;
-      event.preventDefault(); // Prevent default page scrolling
+      event.preventDefault();
     }
   }
 }

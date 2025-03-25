@@ -25,6 +25,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ComplaintComponent } from './complaint/complaint.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ComplaintComponent } from './complaint/complaint.component';
     UserdashboardComponent,
     UserProfileComponent,
     EditProfileComponent,
-    MaintenanceComponent,
+   
     ForgetPasswordComponent,
     ComplaintComponent,
 
@@ -50,7 +51,8 @@ import { ComplaintComponent } from './complaint/complaint.component';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

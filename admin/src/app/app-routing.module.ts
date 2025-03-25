@@ -7,6 +7,7 @@ import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { AdminAnnouncementComponent } from './admin-announcement/admin-announcement.component';
 import { AdminMembersComponent } from './admin-members/admin-members.component';
 import { AdminComplaintsComponent } from './admin-complaints/admin-complaints.component';
+import { AdminMaintenanceComponent } from './admin-maintenance/admin-maintenance.component';
 
 
 const routes: Routes = [{
@@ -17,6 +18,7 @@ const routes: Routes = [{
   {path:'admin-announcement',component:AdminAnnouncementComponent,canActivate:[AuthGuard]},
   {path:'admin-members',component:AdminMembersComponent,canActivate:[AuthGuard]},
   {path:'admin-complaints',component:AdminComplaintsComponent},
+  {path:'admin-maintenance',component:AdminMaintenanceComponent},
   { path: '**', redirectTo: 'admin-login' },
 ];  
 

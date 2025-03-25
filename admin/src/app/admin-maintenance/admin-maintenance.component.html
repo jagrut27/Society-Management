@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Member Maintenance</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Payment ID</th>
+          <th>Member ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Flat Number</th>
+          <th>Block Number</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Payment Method</th>
+       
+        </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let maintenance of maintenacnce">
+          <td>{{ maintenance.paymentId }}</td>
+          <td>{{ maintenance.memberId }}</td>
+          <td>{{ maintenance.name }}</td>
+          <td>{{ maintenance.email }}</td>
+          <td>{{ maintenance.flatNumber }}</td>
+          <td>{{ maintenance.blockNumber }}</td>
+          <td>{{ maintenance.amount }}</td>
+          <td>{{ maintenance.date}}</td>
+          <td>{{ maintenance.status }}</td>
+          <td>{{ maintenance.paymentMethod }}</td>
+         
+      <!--    <td> 
+            <button (click)="deletePayment(maintenance.paymentid)" class="btn btn-danger">
+              Delete
+            </button>  
+         </td> -->
+        </tr> 
+      </tbody> 
+    </table>
+    <button (click)="backToDashboard()" class="back-to-dashboard">Back to Dashboard</button>
+</div>

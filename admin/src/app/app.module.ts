@@ -15,12 +15,14 @@ import { RouterModule } from '@angular/router';
 import { AdminAnnouncementComponent } from './admin-announcement/admin-announcement.component';
 import { AdminMembersComponent } from './admin-members/admin-members.component';
 import { AdminComplaintsComponent } from './admin-complaints/admin-complaints.component';
+import { AdminMaintenanceComponent } from './admin-maintenance/admin-maintenance.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminDashboardComponent,
     AdminMembersComponent,
+    AdminMaintenanceComponent,
     
     
    // 

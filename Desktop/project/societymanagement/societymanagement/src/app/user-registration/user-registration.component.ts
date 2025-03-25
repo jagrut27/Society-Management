@@ -17,7 +17,7 @@
       password: '',
       confirmPassword: '',
       phoneNumber: '',
-      
+      role:'',
       flatNumber: '',
       blockNumber: ''
     };

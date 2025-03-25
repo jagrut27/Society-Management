@@ -106,6 +106,26 @@
   },
   {
     "ContainingType": "Admin.Controllers.ComplaintsController",
+    "Method": "GetTotalComplaints",
+    "RelativePath": "api/Complaints/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Admin.Controllers.ComplaintsController",
+    "Method": "GetRecentComplaints",
+    "RelativePath": "api/Complaints/recent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Admin.Controllers.ComplaintsController",
     "Method": "UpdateComplaintStatus",
     "RelativePath": "api/Complaints/UpdateComplaintStatus",
     "HttpMethod": "PUT",
@@ -184,6 +204,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Admin.Controllers.MaintenancePaymentController",
+    "Method": "GetAllMaintenancePayments",
+    "RelativePath": "api/MaintenancePayment/all-maintenance-payments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Admin.Controllers.MaintenancePaymentController",
+    "Method": "GetRecentPayments",
+    "RelativePath": "api/MaintenancePayment/last3days",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Admin.Controllers.MembersController",
     "Method": "GetAllMembers",
     "RelativePath": "api/Members",
@@ -207,6 +247,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Admin.Controllers.MembersController",
+    "Method": "GetTotalMembers",
+    "RelativePath": "api/Members/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

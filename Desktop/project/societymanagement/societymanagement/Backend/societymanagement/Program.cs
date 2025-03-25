@@ -1,5 +1,6 @@
   using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
 using societymanagement.Data;
@@ -19,7 +20,7 @@ builder.Services.AddScoped<LoginRepository>();
 
 
 builder.Services.AddScoped<ComplainRepsitory>();
-
+builder.Services.AddScoped<PaymentRepository>();
 
 
 

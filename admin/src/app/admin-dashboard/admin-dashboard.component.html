@@ -18,7 +18,11 @@
                 <li><button (click)="goToMembers()">
                     <i class="fas fa-users"></i> Members
                 </button></li>
-                <li><a href="#"><i class="fas fa-hand-holding-usd"></i> Maintenance</a></li>
+                <li>
+                    <button (click)="gotoMaintenance()">
+                        <i class="fas fa-hand-holding-usd"></i> Maintenance
+                    </button>
+                </li>
                 <li>
                     <button (click)="goToComplaints()">
                     <i class="fas fa-exclamation-triangle"></i> Complaints
@@ -44,74 +48,66 @@
                 <h1>Hello! Admin</h1>
             </header>
             <div class="content-area">
-                <div class="card">
+                <div class="card-container">
+                <div class="card1">
                     <h2>Statistics</h2>
                     <div class="stat-item">
                         <i class="fas fa-users"></i>
-                        <span>Total Members: 150</span>
+                        <span>Total Members: {{totalMembers}}</span>
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-box"></i>
-                        <span>Total Maintenance: 200</span>
+                        <span>Total Complaints: {{totalComplaints}}</span>
                     </div>
-                    <div class="stat-item">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Total Complaints: 500</span>
-                    </div>
+                   
                 </div>
-                <div class="card">
-                    <h2>Recent Orders</h2>
+                <div class="card2">
+                    <h2>Recent Payment</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>Order ID</th>
-                                <th>Customer</th>
+                                <th>Member Id</th>
+                                <th>Name</th>
                                 <th>Date</th>
-                                <th>Status</th>
+                                <th>Amount</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>#1234</td>
-                                <td>John Doe</td>
-                                <td>2023-10-26</td>
-                                <td>Shipped</td>
-                            </tr>
-                            <tr>
-                                <td>#1235</td>
-                                <td>Jane Smith</td>
-                                <td>2023-10-25</td>
-                                <td>Pending</td>
-                            </tr>
+                            <tr *ngFor="let payment of recentPayments">
+                                <td>{{ payment.memberId }}</td>
+                                <td>{{ payment.name }}</td>
+                                <td>{{ payment.paymentDate | date:'short' }}</td>
+                                <td>₹{{ payment.amount}}</td>
+                             
+                              </tr>
                         </tbody>
                     </table>
                 </div>
-                 <div class="card">
+                 <div class="card3">
                     <h2>Recent Complaints</h2>
                     <table>
                         <thead>
                             <tr>
                                 <th>Complaint ID</th>
-                                <th>User</th>
-                                <th>Date</th>
+                                <th>Member</th>
+                                <th>Name</th>
+                                <th>Title</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>#C123</td>
-                                <td>Alice Brown</td>
-                                <td>2023-10-27</td>
-                                <td>Open</td>
-                            </tr>
-                            <tr>
-                                <td>#C124</td>
-                                <td>Bob Green</td>
-                                <td>2023-10-26</td>
-                                <td>Resolved</td>
-                            </tr>
+                            <tr *ngFor="let complaint of complaints">
+                                <td>{{ complaint.complaints_id }}</td>
+                                <td>{{complaint.member_id}}</td>
+                                <td>{{ complaint.firstname }} {{complaint.lastname}}</td>
+                                <td>{{complaint.title}}</td>
+                      
+                                <td>
+                                  {{ complaint?.status }}
+                                </td>
                         </tbody>
                     </table>
+                 </div>
                 </div>
             </div>
             <footer class="footer">

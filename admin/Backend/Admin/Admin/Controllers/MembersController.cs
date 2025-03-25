@@ -34,7 +34,14 @@ namespace Admin.Controllers
       await _context.SaveChangesAsync();
       return Ok();
     }
-      
+    //Count Total Members
+    [HttpGet("count")]
+    public IActionResult GetTotalMembers()
+    {
+      int totalMembers = _context.Members.Count();
+      return Ok(new { totalMembers });
+    }
+
 
   }
 

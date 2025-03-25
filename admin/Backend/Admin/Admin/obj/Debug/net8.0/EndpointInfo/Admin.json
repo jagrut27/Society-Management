@@ -152,6 +152,18 @@
         }
       }
     },
+    "/api/Complaints/recent": {
+      "get": {
+        "tags": [
+          "Complaints"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Complaints/{id}": {
       "delete": {
         "tags": [
@@ -199,6 +211,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Complaints/count": {
+      "get": {
+        "tags": [
+          "Complaints"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -312,6 +336,30 @@
         }
       }
     },
+    "/api/MaintenancePayment/all-maintenance-payments": {
+      "get": {
+        "tags": [
+          "MaintenancePayment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MaintenancePayment/last3days": {
+      "get": {
+        "tags": [
+          "MaintenancePayment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Members": {
       "get": {
         "tags": [
@@ -339,6 +387,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Members/count": {
+      "get": {
+        "tags": [
+          "Members"
         ],
         "responses": {
           "200": {

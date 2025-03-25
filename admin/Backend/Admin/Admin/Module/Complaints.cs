@@ -15,6 +15,6 @@ namespace Admin.Module
     public string Description { get; set; }
     public string Status { get; set; }
     public DateTime  created_at { get; set; }
-
+    public object Members { get; internal set; }
   }
 }

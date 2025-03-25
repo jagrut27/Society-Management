@@ -1,2 +1,11 @@
+.vs/
+bin/
+obj/
+*.bak
+*.mdf
+*.ldf
+
 "node_modules/" 
 ".angular/" 
+"societymanagement_new.ldf" 
+"societymanagement_new.mdf" 

@@ -15,18 +15,19 @@
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let member of members">
-              <td>{{ member.memberId }}</td>
-              <td>{{ member.firstname }}</td>
-              <td>{{ member.lastname }}</td>
-              <td>{{ member.email }}</td>
-              <td>{{ member.phoneNumber }}</td>
-              <td>{{ member.blockNumber }}</td>  
-              <td>{{ member.flatNumber }}</td>
-              <td>
-                <button (click)="deleteMember(member.memberId)" class="delete-btn">Delete</button>
-              </td>
-            </tr>
+          <tr *ngFor="let member of members">
+            <td>{{ member.memberId }}</td>  <!-- Make sure 'memberId' matches the TS property -->
+            <td>{{ member.firstname }}</td>
+            <td>{{ member.lastname }}</td>
+            <td>{{ member.email }}</td>
+            <td>{{ member.phoneNumber }}</td>
+            <td>{{ member.blockNumber }}</td>  
+            <td>{{ member.flatNumber }}</td>
+            <td>
+              <button (click)="deleteMember(member.memberId)" class="delete-btn">Delete</button>
+            </td>
+          </tr>
+          
           </tbody>
           
           

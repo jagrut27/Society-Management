@@ -94,15 +94,67 @@ body {
 .content-area {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 40px;
     flex-grow: 1;
 }
+.card-container {
+    display: flex;
+    gap: 10px; /* Adjust gap between cards as needed */
+}
 
-.card {
+.card1 {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Adjust width as needed */
+    text-align: left;
+}
+
+.card1 h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.card1 .stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card1 .stat-item i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.card2, .card3 {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow cards to grow and take remaining space */
+    text-align: left;
+}
+
+.card2 h2, .card3 h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.card2 p, .card3 p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 10px;
+}
+
+/* Optional: Add responsive behavior if needed */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
+
+    .card1, .card2, .card3 {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
 
 table {

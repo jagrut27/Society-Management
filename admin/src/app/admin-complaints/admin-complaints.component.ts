@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
 @Component({
   selector: 'app-admin-complaints',
   templateUrl: './admin-complaints.component.html',
@@ -11,8 +12,10 @@ import { Router } from '@angular/router';
 })
 export class AdminComplaintsComponent implements OnInit {
   complaints: any[] = [];
+  totalComplaints:number | undefined ;
  // router: any;
    apiUrl='https://localhost:7256/api/Complaints/UpdateComplaintStatus';
+   apiURL='https://localhost:7256/api/Complaints/recent';
 
   constructor(private http: HttpClient, private router:Router ) {}
 
@@ -28,6 +31,9 @@ export class AdminComplaintsComponent implements OnInit {
         this.complaints = data;
       });
       console.log("Complaints are",this.complaints);
+  }
+  getRecentComplaints(): Observable<any> {
+    return this.http.get<any>(this.apiURL);
   }
 
   updateStatus(complaintId: number, newStatus: string) {
@@ -47,12 +53,23 @@ export class AdminComplaintsComponent implements OnInit {
     console.log(id);
     if (confirm('Are you sure you want to delete this complaint?')) {
       this.http.delete(`https://localhost:7256/api/Complaints/${id}`)
+    
       
         .subscribe(() => {
           this.loadComplaints(); // Refresh data
-        
+          this.updateTotalComplaints();
         });
     }
+  }
+  updateTotalComplaints(): void {
+    this.http.get<{ totalComplaints: number }>('https://localhost:7256/api/Complaints/count').subscribe(
+      data => {
+        this.totalComplaints = data.totalComplaints;
+      },
+      error => {
+        console.error('Error updating total complaints:', error);
+      }
+    );
   }
   toggleStatus(complaint: any) {
     const newStatus = complaint.status.trim().toLowerCase() === 'pending' ? 'Resolved' : 'Pending';
