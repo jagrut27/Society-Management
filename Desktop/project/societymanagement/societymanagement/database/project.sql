@@ -174,15 +174,14 @@ BEGIN
 END;
 
 EXEC sp_UpdateProfile 
-    @MemberId = 8005, 
+    @MemberId = 10027, 
     @Firstname = 'Johncxcxcxcxc', 
     @Lastname = 'Doe34545', 
-    @Email = 'johndoe@example.com', 
-    @Password = 'SecurePass123', 
+    
     @PhoneNumber = '9876543210', 
     @FlatNumber = 'A-101', 
-    @BlockNumber = 'M'
-    --@imageurl='C:\Users\pcit99.PRUDENT\Desktop\pratham\.net\ado.net\societymanagement\societymanagement\firstimage.jpg';
+    @BlockNumber = 'M',
+    @imageurl='';
 
 CREATE TABLE Complaints (
     complaints_id INT IDENTITY(1,1) PRIMARY KEY,

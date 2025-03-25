@@ -1,7 +1,7 @@
 
 <form id="content" (ngSubmit)="submitComplaint()">
 
-    <h2 style="text-decoration: underline;font-size: 50px;">Submit  Complaint</h2>
+    <h2 style="font-size: 50px;">Submit  Complaint</h2>
     <div class="underline"></div> <!-- Custom line inside the form -->
 
   <label for="title">Title:</label>
@@ -12,3 +12,27 @@
 
   <button type="submit">Submit Complaint</button>
 </form>
+<table class="table table-bordered">
+
+
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let complaint of complaints">
+    
+
+      <td>{{complaint.title}}</td>
+      <td>{{complaint.description }}</td>
+      <td>{{complaint.created_at}}</td>
+      <td [ngClass]="{'pending-status': complaint?.status?.toLowerCase() === 'pending', 'resolved-status': complaint?.status?.toLowerCase() === 'resolved'}">
+        {{ complaint?.status }}
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService, userProfile } from '../auth.service';
+import { AuthService, userProfile,AfterUpdateProfile } from '../auth.service';
 import { response } from 'express';
 @Component({
   selector: 'app-user-profile',
@@ -11,7 +11,7 @@ import { response } from 'express';
 
 export class UserProfileComponent  implements OnInit {
   userEmail: string | null = '';
-  Userprofile: userProfile | null = null; // Initially null to avoid unnecessary API calls
+  Userprofile: userProfile | AfterUpdateProfile | null = null; // Store either userProfile or AfterUpdateProfile
 
 
   UserId : number | null = null;
@@ -37,6 +37,11 @@ export class UserProfileComponent  implements OnInit {
       return;
     }
 
+    if (!this.UserId) {
+      console.error('No user id found in session storage.');
+      return;
+    }
+
     this.authService.getMemberByEmail(this.userEmail).subscribe({
       next: (response: { success: boolean; data: userProfile }) => {
         console.log('Profile response:', response);
@@ -48,6 +53,30 @@ export class UserProfileComponent  implements OnInit {
           // } else {
           //   console.log("No image found for the user.");
           // }
+  
+
+          // this.cd.detectChanges(); // Force UI update
+        } else {
+          console.error('Invalid response structure or missing data.');
+        }
+      },
+      error: (err) => {
+        console.error('Error fetching profile:', err);
+      }
+    });
+
+    
+    this.authService.getmemberbyid(this.UserId).subscribe({
+      next: (response: { success: boolean; data: AfterUpdateProfile }) => {
+        console.log('Profile response:', response);
+
+        if (response.success && response.data) {
+          this.Userprofile = { ...this.Userprofile, ...response.data }; // Merge data           
+           if (this.Userprofile.imageURL) {
+          console.log("Final Corrected Image URL:", this.Userprofile.imageURL);
+        } else {
+          console.log("No image found for the user.");
+        }
   
 
           // this.cd.detectChanges(); // Force UI update

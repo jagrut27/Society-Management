@@ -1,0 +1,127 @@
+<div class="container mt-4">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h3>Flat Transfer</h3>
+      </div>
+      <div class="card-body">
+        <form #flatTransferForm="ngForm" (ngSubmit)="onSubmit(flatTransferForm)">
+          
+          <!-- Current Owner Details -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h4 class="section-title">Current Owner Details</h4>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="currentOwnerName" class="form-label">Current Owner Name</label>
+              <input type="text" id="currentOwnerName" name="currentOwnerName" class="form-control" [(ngModel)]="Flatdetails.CurrentOwnerName">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="currentOwnerContactNumber" class="form-label">Current Owner Contact Number</label>
+              <input type="text" id="currentOwnerContactNumber" name="currentOwnerContactNumber" class="form-control" [(ngModel)]="Flatdetails.CurrentOwnerContactNumber">
+            </div>
+          </div>
+          
+          <!-- Property Details -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h4 class="section-title">Property Details</h4>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="flatNumber" class="form-label">Flat Number</label>
+              <input type="text" id="flatNumber" name="flatNumber" class="form-control" [(ngModel)]="Flatdetails.FlatNumber">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="blockNumber" class="form-label">Block Number</label>
+              <input type="text" id="blockNumber" name="blockNumber" class="form-control" [(ngModel)]="Flatdetails.BlockNumber">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="flatarea" class="form-label">Flat Area</label>
+                <input type="text" id="flatarea" name="flatarea" class="form-control" [(ngModel)]="Flatdetails.FlatArea">
+              </div>
+          </div>
+          
+          <!-- New Owner Details -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h4 class="section-title">New Owner Details</h4>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="newOwnerFullName" class="form-label">New Owner Full Name</label>
+              <input type="text" id="newOwnerFullName" name="newOwnerFullName" class="form-control" [(ngModel)]="Flatdetails.NewOwnerFullName">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="newOwnerContactNumber" class="form-label">New Owner Contact Number</label>
+              <input type="text" id="newOwnerContactNumber" name="newOwnerContactNumber" class="form-control" [(ngModel)]="Flatdetails.NewOwnerContactNumber">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="newOwnerEmail" class="form-label">New Owner Email</label>
+              <input type="email" id="newOwnerEmail" name="newOwnerEmail" class="form-control" [(ngModel)]="Flatdetails.NewOwnerEmail">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="newOwnerAdhar" class="form-label">New Owner Aadhar Number</label>
+              <input type="text" id="newOwnerAdhar" name="newOwnerAdhar" class="form-control" [(ngModel)]="Flatdetails.NewOwnerAdhar">
+            </div>
+            
+            <div class="col-md-12 mb-3">
+                <label for="identityProof" class="form-label">Identity Proof</label>
+                <input type="file" id="identityProof" name="identityProof" (change)="onFileSelected($event)">
+                <small class="form-text text-muted">Upload Identity Of document (PDF, JPG, PNG format, max 5MB)</small>
+              </div>
+          </div>
+          
+          <!-- Payment Details -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h4 class="section-title">Payment Details</h4>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <label for="transferFees" class="form-label">Transfer Fees (₹)</label>
+              <input type="number" id="transferFees" name="transferFees" class="form-control" [(ngModel)]="Flatdetails.TransferFees">
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <label for="paymentMode" class="form-label">Payment Mode</label>
+              <select id="paymentMode" name="paymentMode" class="form-select" [(ngModel)]="Flatdetails.PaymentMode">
+                <option value="" >Select Payment Mode</option>
+                <option value="Online">Online</option>
+                <option value="Cash">Cash</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- //Document Upload -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <h4 class="section-title">Document Upload</h4>
+            </div> 
+            
+            <div class="col-md-12 mb-3">
+              <label for="agreementCopy" class="form-label">Agreement copy</label>
+              <input type="file" id="agreementCopy" name="agreementCopy" (change)="onFileSelected1($event)">
+              <small class="form-text text-muted">Upload Agreement copy document (PDF, JPG, PNG format, max 5MB)</small>
+            </div>
+         </div>
+          
+          <!-- Submit Button -->    
+          <div class="row">
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary btn-lg">
+               Proceed To Pay
+              </button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+</div>

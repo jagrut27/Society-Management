@@ -1,115 +1,139 @@
-/* Center the form on the page
-form {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 50px;
-    background: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align all content */
-
-
-/* Style for H2 */
-h2 {
-    font-size: 50px;
-    font-weight: bold;
+/* Form styling */
+#content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    max-width: 800px;
+  }
+  
+  #content h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
     text-align: center;
-    position: relative;
-    padding-bottom: 20px; /* Space between text and underline */
-    margin-bottom: 50px; /* Space between heading and inputs */
-    width: 100%;
-}
-
-
-
-/* Label styles */
-label {
-    font-size: 16px;
     font-weight: 600;
-    color: #555;
+  }
+  
+  .underline {
+    height: 2px;
+    background-color: #3498db;
+    width: 700px;
+    margin: 0 auto 30px;
+  }
+  
+  #content label {
+    display: block;
     margin-bottom: 8px;
-    align-self: flex-start; /* Align labels to the left */
-}
-
-/* Input fields */
-input[type="text"],
-textarea {
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  #content input[type="text"],
+  #content textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-/* Input focus effect */
-input:focus,
-textarea:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
-}
-
-/* Textarea styling */
-textarea {
-    height: 120px;
-    resize: none;
-}
-
-/* Submit button */
-button {
-    background: linear-gradient(135deg, #3bbd13, #41ad19);
-    color: white;
     padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+  }
+  
+  #content input[type="text"]:focus,
+  #content textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
+  
+  #content textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  #content button[type="submit"] {
+    background-color: #3498db;
+    color: white;
     border: none;
-    border-radius: 6px;
+    padding: 12px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  #content button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Table styling */
+  .table {
     width: 100%;
-}
-
-/* Button hover effect */
-button:hover {
-    background: linear-gradient(135deg, #0056b3, #003b80);
-}
-
-/* Add smooth animations */
-input, textarea, button {
-    transition: all 0.3s ease-in-out;
-}
-/* Style the form to be centered and clean */
-form {
-    max-width: 700px; /* Set form width */
-    margin: 50px auto;
-    padding: 50px;
-    background: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center elements */
-}
-
-/* Style the heading */
-.form-title {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    padding-bottom: 10px; /* Space between text and underline */
-    margin-bottom: 20px; /* Space between heading and form */
-}
-
-/* Create a line that exactly matches the form width */
-.underline {
-    width: 115%; /* Take full width of the form */
-    height: 4px; /* Thickness */
-    background: linear-gradient(90deg, #1f2021, #272829); /* Stylish gradient */
-    border-radius: 2px;
-    margin-bottom: 20px; /* Space before form fields */
-}
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Status styling */
+  .pending-status {
+    color: #e67e22;
+    font-weight: 500;
+  }
+  
+  .resolved-status {
+    color: #27ae60;
+    font-weight: 500;
+  }
+  
+  /* Making compatible with sidebar */
+  @media (min-width: 769px) {
+    #content, 
+    .table {
+      margin-left: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #content {
+      padding: 15px;
+    }
+    
+    .table {
+      font-size: 14px;
+    }
+    
+    .table th, 
+    .table td {
+      padding: 8px 10px;
+    }
+    
+    #content h2 {
+      font-size: 28px !important;
+    }
+  }

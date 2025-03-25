@@ -19,5 +19,9 @@ namespace societymanagement.Entity
 
     [FromForm]
     public IFormFile? ImageFile { get; set; }
+
+  
+
+
   }
 }

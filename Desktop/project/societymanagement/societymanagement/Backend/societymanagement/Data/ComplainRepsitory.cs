@@ -1,5 +1,6 @@
 using System.Data;
 using System.Data.SqlClient;
+using Microsoft.AspNetCore.Http.HttpResults;
 using societymanagement.Entity;
 
 namespace societymanagement.Data
@@ -53,6 +54,54 @@ namespace societymanagement.Data
       {
         throw new Exception("Error Adding New complain", e);
       }
+    }
+
+    public List<Complain> GetComplainByid(int memberid)
+    {
+
+      List<Complain> complains = new List<Complain>();
+      try
+      {
+        _connection.Open();
+
+        using (SqlCommand cmd = new SqlCommand("GetMemberWithComplaintbyid", _connection))
+        {
+          cmd.CommandType = CommandType.StoredProcedure;
+          cmd.Parameters.AddWithValue("@Memberid", memberid);
+
+          SqlDataAdapter dataadpter = new SqlDataAdapter(cmd);
+          DataTable dataTable = new DataTable();
+          dataadpter.Fill(dataTable);
+
+
+
+  
+
+          foreach(DataRow row in dataTable.Rows)
+          {
+            Complain complaindata = new Complain
+            {
+              MemberId = Convert.ToInt32(row["member_id"]),
+              Title = row["title"].ToString(),
+              Description = row["description"].ToString(),
+              Status = row["status"].ToString(),
+              CreatedAt = row["created_at"] != DBNull.Value ? Convert.ToDateTime(row["created_at"]) : (DateTime?)null
+            };
+
+            complains.Add(complaindata);
+          }
+        };
+      }
+      catch(Exception e)
+      {
+        throw new Exception("Error Fetching Complain By Id", e);
+      }
+      finally
+      {
+        _connection.Close();
+      }
+
+      return complains;
     }
 
 

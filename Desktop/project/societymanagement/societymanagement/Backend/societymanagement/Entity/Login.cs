@@ -1,4 +1,4 @@
-﻿namespace societymanagement.Entity
+namespace societymanagement.Entity
 {
     public class Login
     {

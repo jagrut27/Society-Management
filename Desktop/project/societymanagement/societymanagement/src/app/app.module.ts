@@ -7,7 +7,7 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 
 
 
-import { FormsModule } from '@angular/forms';
+import { FormControlName, FormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,7 +25,12 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ComplaintComponent } from './complaint/complaint.component';
+<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
+=======
+import { EventComponent } from './event/event.component';
+import { FlatTransferComponent } from './flat-transfer/flat-transfer.component';
+>>>>>>> a812406 (Updated code flat transfer feature)
 
 @NgModule({
   declarations: [
@@ -39,10 +44,11 @@ import { ReactiveFormsModule } from '@angular/forms';
    
     ForgetPasswordComponent,
     ComplaintComponent,
-
-
-  ],
+    EventComponent,
+    FlatTransferComponent
+],
   imports: [
+   
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,

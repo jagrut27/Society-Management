@@ -19,10 +19,12 @@ export class EditProfileComponent implements OnInit {
     imageFile: null
   };
 
+
   // Updatedata: updatedata | null = null;
   UserId : number | null = null;
 
   constructor(private authService: AuthService, private router: Router) {}
+  
 
 
 
@@ -100,14 +102,16 @@ export class EditProfileComponent implements OnInit {
       console.log(pair[0], pair[1]);
     }
   
+    console.log(formData);
+    
     this.authService.updateProfile(this.UserId,formData).subscribe({
       next: (response: { success: boolean; message: string }) => {
-        console.log('Server Response:', response);
-        if (response && response.success) {
-          alert(response.message || 'Profile updated successfully');
-          this.router.navigate(['dashboarduser']);
-        } else {
-          alert('Profile update failed.');
+          console.log('Server Response:', response);
+          if (response && response.success) {
+            alert(response.message || 'Profile updated successfully');
+            this.router.navigate(['dashboarduser']);
+          } else {
+            alert('Profile update failed.');
         }
       },
       error: (err) => {

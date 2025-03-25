@@ -1,6 +1,6 @@
   import { HttpClient,HttpHeaders  } from '@angular/common/http';
   import { Injectable } from '@angular/core';
-  import { Observable } from 'rxjs';
+  import { map, Observable } from 'rxjs';
 
   export interface userProfile {
     firstname: string;
@@ -13,26 +13,26 @@
 
   }
 
-  // export interface updatedata {
-  //   firstname: string;
-  // lastname: string;
-  //   phoneNumber: string;
-  //   flatNumber: string;
-  //   blockNumber: string;
+  export interface complaindata{
 
-  //   password:string;
-  //   imageURL:string;
-  //   imageFile:string;
+    title:string;
+    description:string;
+    status:string;
+    created_at:Date;
+  }
 
 
-  // }
+  export interface AfterUpdateProfile extends userProfile {
+    imageURL: string;
+  }
 
   @Injectable({
     providedIn: 'root'
   })
   export class AuthService {
 
-  
+    // http://localhost:7104/api/home/addmembers
+
     
     private apiurl= "http://localhost:7104/api/Home/addmembers"  //backend url
 
@@ -42,10 +42,7 @@
 
     private apiurlcomplain= "http://localhost:7104/api/complain/addcomplain"
 
-    
-    // http://localhost:7104/api/home/updateprofile?MemberId=10018
 
-    // http://localhost:7104/api/home/updateprofile?MemberId=10018
 
 
 
@@ -65,6 +62,14 @@
 
         return this.http.get<{ success: boolean; data: userProfile}>(`${this.apiurldashboard}/by-email?email=${email}`);
       }
+
+      
+      getmemberbyid(id:number):Observable<{ success: boolean; data: AfterUpdateProfile } > {
+
+        return this.http.get<{ success: boolean; data: AfterUpdateProfile}>(`${this.apiurldashboard}/by-id?memberid=${id}`);
+      }
+
+
 
 
 
@@ -90,7 +95,25 @@
       
         return this.http.post(this.apiurlcomplain, body);
       }
-      
+
+  
+
+      getcomplainbyuserid(userId: number) {
+        return this.http.get<any>(`http://localhost:7104/api/complain/complainby-id`, {
+          params: { memberid: userId.toString() }
+        });
+      }
+
+      GetEventbyuser() {
+        return this.http.get<any>(`http://localhost:7104/api/Event`);
+      }
       
 
+
+  // Method to submit flat transfer details
+  Submit(Flatdetails:any): Observable<any> {
+    return this.http.post('http://localhost:7104/Api/FlatTransfer', Flatdetails);
+
+
+  }
   }

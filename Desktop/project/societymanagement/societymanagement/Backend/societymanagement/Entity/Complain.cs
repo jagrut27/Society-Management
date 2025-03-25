@@ -6,7 +6,7 @@ namespace societymanagement.Entity
     public int MemberId { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    //public string Status { get; set; } = "pending";
-    //public DateTime CreatedAt { get; set; }
+    public string? Status { get; set; } = "pending";
+    public DateTime? CreatedAt { get; set; }
   }
 }

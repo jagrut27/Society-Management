@@ -21,7 +21,7 @@ namespace Admin.Controllers
       _configuration = configuration;
     }
     [HttpGet]
-    public async Task<IActionResult> GetComplaints()
+    public async Task<IActionResult> GetComplaints()  
     {
       List<Complaints> complaints = new List<Complaints>();
       using (SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"))) 
