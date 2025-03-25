@@ -1,13 +1,4 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-*.mdf
-*.ldf
-
-.vs/
-obj/
-bin/
-*.cache
-*.suo
-
 
 # Compiled output
 /dist

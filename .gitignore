@@ -4,15 +4,6 @@ obj/
 *.bak
 *.mdf
 *.ldf
-*.mdf
-*.ldf
-
-
-.vs/
-obj/
-bin/
-*.cache
-*.suo
 
 "node_modules/" 
 ".angular/" 
