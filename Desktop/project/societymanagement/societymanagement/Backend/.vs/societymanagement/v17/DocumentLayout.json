@@ -97,10 +97,6 @@
       "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\entity\\complain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|c:\\users\\pcit109\\desktop\\society-management\\desktop\\project\\societymanagement\\societymanagement\\backend\\societymanagement\\entity\\members.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB648025-70C4-47C5-8858-2327E1B19D01}|societymanagement\\societymanagement.csproj|solutionrelative:societymanagement\\entity\\members.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EEB772E1-1BDF-0A9C-F502-D1EAEF744C5E}|..\\..\\..\\..\\..\\admin\\Backend\\Admin\\Admin\\Admin.csproj|c:\\users\\pcit109\\desktop\\society-management\\admin\\backend\\admin\\admin\\module\\members.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -167,7 +163,7 @@
               "RelativeDocumentMoniker": "societymanagement\\Controllers\\PaymentController.cs",
               "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\Controllers\\PaymentController.cs",
               "RelativeToolTip": "societymanagement\\Controllers\\PaymentController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAwwFEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwFEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T07:15:48.201Z",
               "EditorCaption": ""
@@ -425,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "EditMember.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\Entity\\EditMember.cs",
               "RelativeDocumentMoniker": "societymanagement\\Entity\\EditMember.cs",
@@ -461,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "Members.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\Members.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\admin\\Backend\\Admin\\Admin\\Module\\Members.cs",
@@ -473,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "Users.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\Users.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\admin\\Backend\\Admin\\Admin\\Module\\Users.cs",
@@ -485,19 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Members.cs",
-              "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\Entity\\Members.cs",
-              "RelativeDocumentMoniker": "societymanagement\\Entity\\Members.cs",
-              "ToolTip": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\Entity\\Members.cs",
-              "RelativeToolTip": "societymanagement\\Entity\\Members.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T11:56:30.051Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "Announcement.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\Module\\Announcement.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\admin\\Backend\\Admin\\Admin\\Module\\Announcement.cs",
@@ -509,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\appsettings.json",
               "RelativeDocumentMoniker": "societymanagement\\appsettings.json",
@@ -521,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\admin\\Backend\\Admin\\Admin\\appsettings.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\admin\\Backend\\Admin\\Admin\\appsettings.json",
@@ -533,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\pcit109\\Desktop\\Society-Management\\Desktop\\project\\societymanagement\\societymanagement\\Backend\\societymanagement\\Entity\\Login.cs",
               "RelativeDocumentMoniker": "societymanagement\\Entity\\Login.cs",
