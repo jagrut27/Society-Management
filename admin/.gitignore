@@ -2,6 +2,13 @@
 *.mdf
 *.ldf
 
+.vs/
+obj/
+bin/
+*.cache
+*.suo
+
+
 # Compiled output
 /dist
 /tmp
