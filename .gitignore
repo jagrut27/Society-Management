@@ -4,10 +4,7 @@ obj/
 *.bak
 *.mdf
 *.ldf
-*.mdf
-*.ldf
-
-"node_modules/" 
-".angular/" 
-"societymanagement_new.ldf" 
-"societymanagement_new.mdf" 
+node_modules/
+.angular/
+societymanagement_new.ldf
+societymanagement_new.mdf
