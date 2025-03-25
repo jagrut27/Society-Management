@@ -1,167 +1,119 @@
-/* Dashboard Container */
 .dashboard {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Heading */
-  h2 {
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  /* Profile Section */
-  .profile {
-    margin-top: 20px;
-    padding: 15px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Profile Details */
-  .profile p {
-    font-size: 16px;
-    color: #555;
-    margin: 5px 0;
-  }
-  
-  /* Buttons
-  button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  } */
-  
-  .btn button:hover {
-    opacity: 0.9;
-  }
-  
-  /* View Profile Button */
-  .btn button:first-of-type {
-    background: #dc3545;
-    color: white;
-  }
-  
-  /* Logout Button */
-  .btn button:last-of-type {
-    background: #dc3545;
-    color: white;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .dashboard {
-      width: 90%;
-    }
-  
-    .profile p {
-      font-size: 14px;
-    }
-  
-    .btn button {
-      width: 100%;
-      padding: 15px;
-    }
-  }
-
-/* Profile Container - Stack Email & Name but Keep in Same Place */
-/* Profile Container - Align Email & Name at Same Start */
-
-/* Profile Text - Keep Email & Name Aligned */
-.profile-text {
-    margin: 0; /* Remove extra spacing */
-  
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
 }
 
-
-
-/* Adjust Font Styling for Other Profile Details */
-.profile p {
-    font-size: 18px;
-    color: #444;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Button Styling */
-.btn button {
-    margin-top: 15px;
-    padding: 12px 18px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-right: 40px;
-}
-
-/* Profile Container - Align Email & Name */
 .profile-container {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align text to the start */
-    font-size: 25px; /* Set font size */
-    font-family: 'Poppins', sans-serif; /* Custom font */
-    margin-bottom: 45px; /* Spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 
-/* Profile Container - Other Details */
-.profile-container1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 25px;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Apply Underline to Labels (Email, Name, Phone, etc.) */
-.profile-container strong,
-.profile-container1 strong {
-    text-decoration: underline; /* Underline label */
-    font-weight: bold; /* Keep labels bold */
-}
-
-/* Values Should Not Be Bold */
-.profile-container span,
-.profile-container1 p {
-    font-weight: normal; /* Ensure values are normal weight */
-    margin: 5px 0; /* Spacing */
-}
 .profile-img {
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover; /* Ensures proper scaling */
-  border: 3px solid #4CAF50; /* Green border for aesthetics */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
-  display: block;
-  margin: 20px auto; /* Center the image */
-  transition: transform 0.3s ease-in-out;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #f0f0f0;
 }
 
-/* Hover effect */
-.profile-img:hover {
-  transform: scale(1.1); /* Slight zoom-in on hover */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 24px;  /* Increased font size */
 }
 
-/* Mobile responsiveness */
+.profile-field {
+  display: flex;
+  gap: 5px;
+  font-size: 24px;  /* Increased font size */
+  color: #333;
+}
+
+.profile-container1 {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 24px;  /* Increased font size */
+}
+
+.profile-container1 p {
+  margin: 12px 0;
+  font-size: 22px;  /* Increased font size */
+  color: #444;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;  /* Increased button font size */
+  transition: all 0.3s ease;
+}
+
+.btn button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+  font-size: 24px;  /* Increased strong text font size */
+  font-weight: 700;
+}
+
 @media (max-width: 600px) {
-  .profile-img {
-    width: 120px;
-    height: 120px;
+  .dashboard {
+    padding: 15px;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .profile-text {
+    font-size: 20px;  /* Increased mobile font size */
+  }
+
+  .profile-container1 p {
+    font-size: 18px;  /* Increased mobile font size */
   }
 }
-
-
-
-

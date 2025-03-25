@@ -9,6 +9,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ComplaintComponent } from './complaint/complaint.component';
+import { EventComponent } from './event/event.component';
+import { FlatTransferComponent } from './flat-transfer/flat-transfer.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,8 @@ const routes: Routes = [
       { path: 'maintenance', component: MaintenanceComponent },
       { path: 'user-profile', component: UserProfileComponent },
       { path: 'complaints', component: ComplaintComponent },
+      { path: 'event', component: EventComponent },
+      { path: 'flat-transfer', component: FlatTransferComponent },
  //     {path:'admin-login',component:AdminloginComponent}
 
     ]

@@ -96,10 +96,7 @@ namespace societymanagement.Controllers
         {
           return Ok(new { success = false, message = "Flat Number Registered In This Block...." }); // 400 Bad Request
         }
-        else if (result.Contains("Error"))
-        {
-          return StatusCode(500, new { success = false, message = result }); // 500 Internal Server Error
-        }
+    
         else
         {
           return Ok(new { success = true, message = result }); 
@@ -136,7 +133,7 @@ namespace societymanagement.Controllers
       }
 
 
-    }
+  }
       [HttpPut("updateprofile")]
       public async Task<ActionResult> UpdateMember([FromQuery]int MemberId, [FromForm] EditMember member)  // ✅ Change [FromBody] to [FromForm]
     {
@@ -177,9 +174,8 @@ namespace societymanagement.Controllers
         }
       }
 
-
     [HttpGet("by-id")]
-    public IActionResult FetchMemberById([FromHeader]int memberid)
+    public IActionResult FetchMemberById(int memberid)
     {
       try
       {
@@ -207,7 +203,7 @@ namespace societymanagement.Controllers
             FlatNumber = member.FlatNumber,
             BlockNumber = member.BlockNumber,
 
-            ImageURL = member.ImageUrl
+            ImageURL = imageUrl
           }
         });
       }

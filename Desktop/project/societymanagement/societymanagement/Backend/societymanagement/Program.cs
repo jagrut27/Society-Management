@@ -22,6 +22,16 @@ builder.Services.AddScoped<LoginRepository>();
 builder.Services.AddScoped<ComplainRepsitory>();
 builder.Services.AddScoped<PaymentRepository>();
 
+builder.Services.AddScoped<EventRepository>();
+builder.Services.AddScoped<FlatTransferRepository>();
+
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+  options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+});
+
+
 
 
 

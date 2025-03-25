@@ -161,7 +161,7 @@ namespace societymanagement.Data
 
 
                 using (SqlCommand cmd = new SqlCommand("sp_PostMember", _connection))
-                        {
+                {
                             cmd.CommandType = CommandType.StoredProcedure;
 
                             cmd.Parameters.AddWithValue("@firstname", member.Firstname);
@@ -176,7 +176,7 @@ namespace societymanagement.Data
                             cmd.ExecuteNonQuery();
 
                             return "Member Added Successfully";
-                        }
+                 }
 
 
                     
@@ -297,56 +297,7 @@ namespace societymanagement.Data
       }
     }
 
-    //public Members FetchAfterUpdate(int memberid,EditMember member)
-    //{
-    //  try
-    //  {
-    //    _connection.Open();
 
-    //    using (SqlCommand cmd = new SqlCommand("sp_FetchALldataAfterUpdate", _connection))
-    //    {
-    //      cmd.CommandType = CommandType.StoredProcedure;
-    //      cmd.Parameters.AddWithValue("@Member_Id", memberid);
-    //      //cmd.Parameters.AddWithValue("", email);
-
-
-    //      SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-    //      DataTable dataTable = new DataTable();
-    //      dataAdapter.Fill(dataTable);
-
-    //      if (dataTable.Rows.Count > 0)
-    //      {
-    //        DataRow row = dataTable.Rows[0];
-
-    //        return new Members
-    //        {
-    //          MemberId = Convert.ToInt32(row["MemberId"]),
-    //          Firstname = row["Firstname"].ToString(),
-    //          Lastname = row["Lastname"].ToString(),
-    //          //Email = row["Email"].ToString(),
-    //          //Password = row["Password"].ToString(),
-    //          PhoneNumber = row["PhoneNumber"].ToString(),
-
-    //          FlatNumber = row["FlatNumber"].ToString(),
-    //          BlockNumber = row["BlockNumber"].ToString(),
-    //          ImageUrl = row.IsNull("ImageURL") ? "" : row["ImageURL"].ToString()
-    //        };
-    //      }
-    //      else
-    //      {
-    //        return null; // Member not found
-    //      }
-    //    }
-    //  }
-    //  catch (Exception ex)
-    //  {
-    //    throw new Exception("Error fetching member by email", ex);
-    //  }
-    //  finally
-    //  {
-    //    _connection.Close();
-    //  }
-    //}
 
 
     public EditMember FetchAfterUpdate(int memberid)

@@ -1,83 +1,131 @@
-/* Style for the form container */
-form {
-    width: 130%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px #0000001a;
-    display: flex;
-    flex-direction: column;
-  }
-  /* .updatefrom{
-    margin-bottom: 50px;
-  } */
+:host {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: calc(100vh - 60px); /* Adjust based on your header/footer height */
+}
 
-  /* Style the form to be centered and clean */
+#updatefrom {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 600px;
+  width: 100%;
+  align-self: flex-start;
+}
 
-  
-  /* Style for form headings */
-  h3 {
-    text-align: center;
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
+#updatefrom h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 24px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+#updatefrom label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+#updatefrom input[type="text"],
+#updatefrom input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s;
+}
+
+#updatefrom input[type="file"] {
+  width: 100%;
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+#updatefrom input[type="text"]:focus,
+#updatefrom input[type="password"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Button container for centering */
+#updatefrom .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+#updatefrom button {
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  min-width: 120px;
+}
+
+#updatefrom button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+}
+
+#updatefrom button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+#updatefrom button[type="button"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#updatefrom button[type="button"]:hover {
+  background-color: #c0392b;
+}
+
+/* Custom file input styling */
+#updatefrom input[type="file"] {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+#updatefrom input[type="file"]:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive adjustments to align with sidebar */
+@media (min-width: 769px) {
+  :host {
+    padding-left: 240px; /* Adjust based on your sidebar width */
+  }
+}
+
+@media (max-width: 768px) {
+  #updatefrom {
+    padding: 15px;
   }
   
-  /* Style for form labels */
-  label {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #555;
-  }
-  
-  /* Style for form inputs */
-  input[type="text"],
-  input[type="password"],
-  input[type="file"] {
-    width: 90%;
+  #updatefrom input[type="text"],
+  #updatefrom input[type="password"] {
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
   }
   
-  /* Style for file input */
-  input[type="file"] {
-    padding: 5px;
-    background: #fff;
-    width: 90%;
+  #updatefrom button {
+    padding: 50px 30px;
+    font-size: 14px;
   }
-  
-  /* Style for submit and cancel buttons */
-  button {
-    margin-top: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    width: 90%;
-    margin-left:5%;
-  }
-  
-  /* Update button */
-  button[type="submit"] {
-    background: #007bff;
-    color: white;
-  }
-  
-  /* Cancel button */
-  button[type="button"] {
-    background: #dc3545;
-    color: white;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-    
-  }
-  
+}

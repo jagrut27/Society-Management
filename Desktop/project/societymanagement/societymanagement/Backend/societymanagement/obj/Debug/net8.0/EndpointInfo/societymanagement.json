@@ -36,6 +36,223 @@
         }
       }
     },
+    "/api/complain/complainby-id": {
+      "get": {
+        "tags": [
+          "Complain"
+        ],
+        "parameters": [
+          {
+            "name": "memberid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complain"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complain"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complain"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Event": {
+      "get": {
+        "tags": [
+          "Event"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complain"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complain"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Complain"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Api/FlatTransfer": {
+      "post": {
+        "tags": [
+          "FlatTransfer"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "BlockNumber",
+                  "CurrentOwnerContactNumber",
+                  "CurrentOwnerName",
+                  "FlatArea",
+                  "FlatNumber",
+                  "NewOwnerAdhar",
+                  "NewOwnerContactNumber",
+                  "NewOwnerEmail",
+                  "NewOwnerFullName",
+                  "PaymentMode",
+                  "TransferFees"
+                ],
+                "type": "object",
+                "properties": {
+                  "CurrentOwnerName": {
+                    "type": "string"
+                  },
+                  "CurrentOwnerContactNumber": {
+                    "type": "string"
+                  },
+                  "FlatNumber": {
+                    "type": "string"
+                  },
+                  "BlockNumber": {
+                    "type": "string"
+                  },
+                  "NewOwnerFullName": {
+                    "type": "string"
+                  },
+                  "NewOwnerContactNumber": {
+                    "type": "string"
+                  },
+                  "NewOwnerEmail": {
+                    "type": "string"
+                  },
+                  "NewOwnerAdhar": {
+                    "type": "string"
+                  },
+                  "FlatArea": {
+                    "type": "string"
+                  },
+                  "TransferFees": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "PaymentMode": {
+                    "type": "string"
+                  },
+                  "ImageIdentityproofFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Identityproofurl": {
+                    "type": "string"
+                  },
+                  "Agreementcopyfile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Agreementcopyurl": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "CurrentOwnerName": {
+                  "style": "form"
+                },
+                "CurrentOwnerContactNumber": {
+                  "style": "form"
+                },
+                "FlatNumber": {
+                  "style": "form"
+                },
+                "BlockNumber": {
+                  "style": "form"
+                },
+                "NewOwnerFullName": {
+                  "style": "form"
+                },
+                "NewOwnerContactNumber": {
+                  "style": "form"
+                },
+                "NewOwnerEmail": {
+                  "style": "form"
+                },
+                "NewOwnerAdhar": {
+                  "style": "form"
+                },
+                "FlatArea": {
+                  "style": "form"
+                },
+                "TransferFees": {
+                  "style": "form"
+                },
+                "PaymentMode": {
+                  "style": "form"
+                },
+                "ImageIdentityproofFile": {
+                  "style": "form"
+                },
+                "Identityproofurl": {
+                  "style": "form"
+                },
+                "Agreementcopyfile": {
+                  "style": "form"
+                },
+                "Agreementcopyurl": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/home/members": {
       "get": {
         "tags": [
@@ -241,7 +458,7 @@
         "parameters": [
           {
             "name": "memberid",
-            "in": "header",
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -357,6 +574,15 @@
           "description": {
             "type": "string",
             "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -412,6 +638,15 @@
           },
           "role": {
             "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageFile": {
+            "type": "string",
+            "format": "binary",
             "nullable": true
           }
         },

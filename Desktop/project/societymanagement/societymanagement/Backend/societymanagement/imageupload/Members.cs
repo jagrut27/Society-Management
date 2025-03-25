@@ -16,7 +16,7 @@ namespace societymanagement.Entity
 
       public string role { get; set; }
 
-    //public String ImageUrl { get; set; }
+    //public String? ImageUrl { get; set; }
 
     //public IFormFile ImageFile { get; set; }
   }

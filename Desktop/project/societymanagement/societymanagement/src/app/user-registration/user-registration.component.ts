@@ -19,7 +19,8 @@
       phoneNumber: '',
       role:'',
       flatNumber: '',
-      blockNumber: ''
+      blockNumber: '',
+        role:''
     };
 
     errorMessage: string = '';
@@ -83,10 +84,11 @@
 
       this.authService.register(this.user).subscribe({
         next: (response) => {
+          console.log(response);
           if (response.success) {
             console.log('Registration successful:', response);
             alert(response.message);
-            window.location.reload();
+            window.location.reload(); 
           }
           else{
             console.log(response.message);
