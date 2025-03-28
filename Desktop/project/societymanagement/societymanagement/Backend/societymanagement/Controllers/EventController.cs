@@ -16,11 +16,11 @@ namespace societymanagement.Controllers
     }
 
     [HttpGet]
-    public ActionResult<List<Complain>> GetComplainAll()
+    public ActionResult<List<Complain>> GetAllEvent()
     {
       try
       {
-        var complaindata = eventRepository.GetComplain();
+        var complaindata = eventRepository.GetEvent();
 
         if (complaindata == null) {
           return Ok("complain not found");

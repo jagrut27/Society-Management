@@ -16,6 +16,7 @@ import { AdminAnnouncementComponent } from './admin-announcement/admin-announcem
 import { AdminMembersComponent } from './admin-members/admin-members.component';
 import { AdminComplaintsComponent } from './admin-complaints/admin-complaints.component';
 import { AdminMaintenanceComponent } from './admin-maintenance/admin-maintenance.component';
+import { AdminFlatTransferComponent } from './admin-flat-transfer/admin-flat-transfer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AdminMaintenanceComponent } from './admin-maintenance/admin-maintenance
     AdminDashboardComponent,
     AdminMembersComponent,
     AdminMaintenanceComponent,
+    AdminFlatTransferComponent,
     
     
    // 

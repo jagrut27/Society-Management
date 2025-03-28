@@ -29,6 +29,8 @@ export class EditProfileComponent implements OnInit {
 
 
   ngOnInit(): void{
+    console.log("Profile Getting load");
+
     let storedEmail = sessionStorage.getItem('userEmail');
     console.log('Logged-in user email:', storedEmail); // Log to ensure email is retrieved
 
@@ -60,7 +62,6 @@ export class EditProfileComponent implements OnInit {
       }
 
     });
-
 
   }
 

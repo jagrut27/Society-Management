@@ -20,9 +20,14 @@ export class UserProfileComponent  implements OnInit {
 
   ngOnInit(): void {
     // Fetch email from session to display it
+    console.log("ngOnInit() is running...");
     this.userEmail = sessionStorage.getItem('userEmail');
 
     const storedUserId=sessionStorage.getItem('UserId');
+
+    console.log('Stored Email:', this.userEmail);
+  console.log('Stored UserId:', storedUserId);
+
 
     if (storedUserId) {
       this.UserId = parseInt(storedUserId, 10); // Convert string to number
@@ -90,7 +95,7 @@ export class UserProfileComponent  implements OnInit {
     });
   }
 
-  logout() {
+  logOut() {
     // sessionStorage.removeItem('userEmail');
     sessionStorage.clear();
     this.router.navigate(['/login']); // Redirect to login page
@@ -124,25 +129,21 @@ export class UserProfileComponent  implements OnInit {
     }
       
     this.authService.delete_profile(this.UserId).subscribe({
-        next:(response:{success: boolean;message:String})=>{
-          console.log("Delete profile",response);
-
-          if(response.success)
-          {
-            alert(response.message);
-            this.logout();
-          }
-          else{
-            alert(response.message);  
-          }
-        },
-        error:(err)=>{
-          alert("An error occurred while deleting the profile. Please try again later.");
+      next: (response: { success: boolean; message: string }) => { // ✅ Fixed syntax errors
+        console.log("Delete profile", response);
+    
+        if (response.success) {
+          alert(response.message);
+          this.logOut(); // ✅ Fixed function name (logOut instead of logout)
+        } else {
+          alert(response.message);  
         }
-        
-
+      },
+      error: (err) => { // ✅ Fixed error function syntax
+        alert("An error occurred while deleting the profile. Please try again later.");
+        console.error("Error deleting profile:", err); // ✅ Added error logging for debugging
+      }
     });
-
-  }
-
+  }   
+  
 }

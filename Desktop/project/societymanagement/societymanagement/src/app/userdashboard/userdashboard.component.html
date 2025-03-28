@@ -1,32 +1,31 @@
 <div class="sidebar">
-    <!-- <button class="toggle-btn" (click)="toggleSidebar()">☰</button> -->
-    
-    <ul>
-      <li class="dropdown">
-        <!-- Clicking "View Profile" will navigate to the profile page and open the dropdown -->
-        <a routerLink="/dashboarduser/user-profile"  class="dropbtn">View Profile</a>
-       
-      </li>
-      <li><a routerLink="/dashboarduser/event" style="font-size: 30px;">Events</a></li>
-      <li><a routerLink="/dashboarduser/complaints" style="font-size: 30px;">Complaints</a></li>
-      <li><a routerLink="/dashboarduser/maintenance" style="font-size: 30px;">Maintenance</a></li>
-      <li><a routerLink="/dashboarduser/flat-transfer" style="font-size: 30px;">Flat Transfer</a></li>
-    </ul>
+  <!-- <button class="toggle-btn" (click)="toggleSidebar()">☰</button> -->
+  <ul>
+    <li class="dropdown">
+      <!-- Clicking "View Profile" will navigate to the profile page and open the dropdown -->
+      <a routerLink="/dashboarduser/user-profile" class="dropbtn">View Profile</a>
+    </li>
+    <li><a routerLink="/dashboarduser/event" style="font-size: 30px;">Events</a></li>
+    <li><a routerLink="/dashboarduser/complaints" style="font-size: 30px;">Complaints</a></li>
+    <li><a routerLink="/dashboarduser/maintenance" style="font-size: 30px;">Maintenance</a></li>
+    <li><a routerLink="/dashboarduser/flat-transfer" style="font-size: 30px;">Flat Transfer</a></li>
+  </ul>
+</div>
+
+<!-- Main Content Area -->
+<div class="dashboard">
+  <!-- Router outlet for dynamic content -->
+  <router-outlet></router-outlet>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 SociyoSync. All Rights Reserved.</p>
+    <nav class="footer-nav">
+      <a routerLink="/about-us">About Us</a>
+      <a routerLink="/terms-conditions">Terms & Conditions</a>
+    </nav>
   </div>
-  
-  <!-- Main Content Area -->
-  <div class="dashboard">
-    <router-outlet></router-outlet>
-  </div>
-  
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Society-Management. All Rights Reserved.</p>
-      <nav class="footer-nav">
-        <a routerLink="/about-us">About Us</a>
-        <a routerLink="/terms-conditions">Terms & Conditions</a>
-      </nav>
-    </div>
-  </footer>
-  
+</footer>

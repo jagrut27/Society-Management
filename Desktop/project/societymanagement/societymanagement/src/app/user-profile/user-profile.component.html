@@ -14,14 +14,14 @@
     </div>
 
     <div class="profile-container1">
-        <p><strong>Email       :</strong> <span>{{ userEmail }}</span></p>
-        <p><strong>Phone Number:</strong> {{ profile.phoneNumber }}</p>
-        <p><strong>Flat Number:</strong> {{ profile.flatNumber }}</p>
-        <p><strong>Block Number:</strong> {{ profile.blockNumber }}</p>
+        <p><strong>Email : </strong> <span>{{ userEmail }}</span></p>
+        <p><strong>Phone Number : </strong> {{ profile.phoneNumber }}</p>
+        <p><strong>Flat Number : </strong> {{ profile.flatNumber }}</p>
+        <p><strong>Block Number : </strong> {{ profile.blockNumber }}</p>
     </div>
 
     <div class="btn">
-        <button (click)="logout()">Logout</button>
+        <button (click)="logOut()">Logout</button>
         <button (click)="Edit_profile()" style="background: #dc3545; color: white;">Edit</button>
         <button (click)="delete_profile()" style="background: #dc3545;">Delete</button>
     </div>

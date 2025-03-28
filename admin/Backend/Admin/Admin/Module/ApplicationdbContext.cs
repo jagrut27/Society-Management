@@ -12,6 +12,7 @@ namespace Admin.Module
     public DbSet<Members>Members { get; set; }
 
     public DbSet<MaintenancePayment> MaintenancePayment { get; set; }
+    public DbSet<FlatTransferRequest> FlatTransferRequest { get; set; }
 
   //  public DbSet<Complaints> Complaints { get; set; }
 

@@ -20,7 +20,7 @@
       role:'',
       flatNumber: '',
       blockNumber: '',
-        role:''
+      //role:''
     };
 
     errorMessage: string = '';

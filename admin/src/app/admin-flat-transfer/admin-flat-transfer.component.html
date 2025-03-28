@@ -1,0 +1,46 @@
+
+<div class="container">
+    <h2>Flat Transfer Details</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Current Owner Name</th>
+          <th>Current Owner Contact Number</th>
+          <th>Flat Number</th>
+          <th>Block Number</th>
+          <th>New Owner Full Name</th>
+          <th>New Owner Contact Number</th>
+          <th>Email </th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>approve</th>
+          <th>Action</th>
+
+          
+       
+        </tr>
+      </thead>  
+      <tbody>
+         <tr *ngFor="let flattransfer of FlatTransfer">
+        
+           <td>{{flattransfer.currentownername}}</td>
+          <td>{{flattransfer.currentOwnercontactnumber }}</td>
+          <td>{{flattransfer.flatNumber }}</td>
+          <td>{{flattransfer.blockNumber }}</td>
+          <td>{{flattransfer.newOwnerFullName}}</td>
+          <td>{{flattransfer.newOwnerContactNumber  }}</td>
+          <td>{{flattransfer.newOwnerEmail }}</td>
+          <td>{{flattransfer.transfer_fees }}</td>
+          <td>{{flattransfer.requestedAt  }}</td>
+       
+         
+       <td> 
+        <!--    <button (click)="deleteRequest(flattransfer.transfer_id)" class="btn btn-danger">
+              Delete
+            </button>  --> 
+         </td> 
+        </tr> 
+      </tbody> 
+    </table>
+    <button (click)="backToDashboard()" class="back-to-dashboard">Back to Dashboard</button>
+</div>

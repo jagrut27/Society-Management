@@ -26,6 +26,7 @@ import { ComplaintComponent } from './complaint/complaint.component';
 import { ReactiveFormsModule } from '@angular/forms';  // Keep this line
 import { EventComponent } from './event/event.component'; // Keep this line
 import { FlatTransferComponent } from './flat-transfer/flat-transfer.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { FlatTransferComponent } from './flat-transfer/flat-transfer.component';
     ForgetPasswordComponent,
     ComplaintComponent,
     EventComponent, // Keep this
-    FlatTransferComponent
+    FlatTransferComponent, 
   ],
   imports: [
     BrowserModule,
@@ -52,6 +53,7 @@ import { FlatTransferComponent } from './flat-transfer/flat-transfer.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule // Keep this
+   // DashboardHomeComponent
   ],
   providers: [
     provideClientHydration(withEventReplay())

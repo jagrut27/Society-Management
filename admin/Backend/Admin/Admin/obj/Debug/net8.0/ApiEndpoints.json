@@ -204,6 +204,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Admin.Controllers.FlatTransferRequestController",
+    "Method": "GetAllRequset",
+    "RelativePath": "api/FlatTransferRequest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Admin.Controllers.MaintenancePaymentController",
     "Method": "GetAllMaintenancePayments",
     "RelativePath": "api/MaintenancePayment/all-maintenance-payments",

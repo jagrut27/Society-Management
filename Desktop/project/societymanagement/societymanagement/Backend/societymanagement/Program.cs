@@ -17,6 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<MemberRepository>();
 builder.Services.AddScoped<LoginRepository>();
 //builder.Services.AddScoped<ImageController>();
+builder.Services.AddScoped<AnnouncementRepo>();
 
 
 builder.Services.AddScoped<ComplainRepsitory>();

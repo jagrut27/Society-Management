@@ -94,6 +94,9 @@ export class AdminDashboardComponent {
   gotoMaintenance(){
     this.router.navigate(['/admin-maintenance']);
   }
+  FlatTransfer(){
+    this.router.navigate(['/admin-flat-transfer'])
+  }
  
   sidebarOpen: boolean = false; 
   toggleSidebar() {

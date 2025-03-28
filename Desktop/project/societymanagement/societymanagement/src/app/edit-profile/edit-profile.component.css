@@ -3,57 +3,93 @@
   justify-content: center;
   padding: 20px;
   min-height: calc(100vh - 60px); /* Adjust based on your header/footer height */
+  background: linear-gradient(135deg, #e9ecef 0%, #f8fafc 100%); /* Light gray gradient */
+  animation: fadeIn 1s ease-in-out; /* Subtle page fade-in */
 }
 
 #updatefrom {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
   max-width: 600px;
   width: 100%;
   align-self: flex-start;
+  animation: slideUp 0.6s ease-out forwards; /* Form slide-up animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#updatefrom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
 }
 
 #updatefrom h3 {
-  color: #2c3e50;
+  color: #1e3a8a; /* Deep blue for elegance */
   text-align: center;
   margin-bottom: 25px;
   font-weight: 600;
   font-size: 24px;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #60a5fa; /* Soft blue border */
   padding-bottom: 10px;
+  position: relative;
+}
+
+#updatefrom h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #93c5fd; /* Lighter blue accent */
+  transition: width 0.4s ease;
+  transform: translateX(-50%);
+}
+
+#updatefrom h3:hover::after {
+  width: 50px; /* Expands on hover */
 }
 
 #updatefrom label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: #2c3e50;
+  color: #1e3a8a; /* Matching deep blue */
+  transition: color 0.3s ease;
 }
 
 #updatefrom input[type="text"],
 #updatefrom input[type="password"] {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 6px;
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
-  transition: border-color 0.3s;
+  background: #f9fafb; /* Very light gray background */
+  transition: all 0.3s ease;
 }
 
 #updatefrom input[type="file"] {
   width: 100%;
-  padding: 8px 0;
+  padding: 10px;
   margin-bottom: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #updatefrom input[type="text"]:focus,
-#updatefrom input[type="password"]:focus {
-  border-color: #3498db;
+#updatefrom input[type="password"]:focus,
+#updatefrom input[type="file"]:focus {
+  border-color: #60a5fa; /* Soft blue focus */
   outline: none;
-  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.3);
+  background: #ffffff;
+  transform: scale(1.02);
 }
 
 /* Button container for centering */
@@ -61,71 +97,126 @@
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #updatefrom button {
   padding: 12px 30px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   border: none;
   min-width: 120px;
+  position: relative;
+  overflow: hidden;
 }
 
 #updatefrom button[type="submit"] {
-  background-color: #3498db;
+  background: linear-gradient(45deg, #60a5fa, #93c5fd); /* Blue gradient */
   color: white;
 }
 
 #updatefrom button[type="submit"]:hover {
-  background-color: #2980b9;
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.4);
 }
 
 #updatefrom button[type="button"] {
-  background-color: #e74c3c;
+  background: linear-gradient(45deg, #f87171, #fca5a5); /* Red gradient */
   color: white;
 }
 
 #updatefrom button[type="button"]:hover {
-  background-color: #c0392b;
+  background: linear-gradient(45deg, #ef4444, #f87171);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(248, 113, 113, 0.4);
+}
+
+/* Button ripple effect */
+#updatefrom button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+#updatefrom button:hover::before {
+  width: 200px;
+  height: 200px;
 }
 
 /* Custom file input styling */
 #updatefrom input[type="file"] {
   display: block;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 8px;
+  padding: 10px;
   width: 100%;
   cursor: pointer;
-  background-color: #f8f9fa;
+  background-color: #f9fafb;
 }
 
 #updatefrom input[type="file"]:hover {
-  background-color: #f1f1f1;
+  background-color: #f1f3f5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive adjustments to align with sidebar */
 @media (min-width: 769px) {
   :host {
-    padding-left: 240px; /* Adjust based on your sidebar width */
+    padding-left: 280px; /* Adjusted for typical sidebar width (260px + padding) */
   }
 }
 
 @media (max-width: 768px) {
-  #updatefrom {
+  :host {
     padding: 15px;
+  }
+
+  #updatefrom {
+    padding: 20px;
+    border-radius: 10px;
   }
   
   #updatefrom input[type="text"],
-  #updatefrom input[type="password"] {
+  #updatefrom input[type="password"],
+  #updatefrom input[type="file"] {
     padding: 10px;
   }
   
   #updatefrom button {
-    padding: 50px 30px;
+    padding: 10px 25px; /* Corrected from 50px to a reasonable value */
     font-size: 14px;
+  }
+
+  #updatefrom .button-group {
+    flex-direction: column;
+    gap: 10px;
   }
 }

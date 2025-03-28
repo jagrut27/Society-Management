@@ -1,119 +1,334 @@
+/* user-profile.component.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif; /* Luxurious primary font */
+  background: linear-gradient(135deg, #eef2f6 0%, #f7f9fc 100%); /* Subtle gradient background */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
 .dashboard {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background-color: #fff;
+  max-width: 850px;
+  margin: 50px auto 80px auto; /* Added bottom margin to account for fixed footer height */
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  min-height: calc(100vh - 130px); /* Ensures content fills space above footer (50px top margin + 80px footer height) */
+  animation: slideInUp 0.8s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background overlay */
+.dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(147, 197, 253, 0.05) 0%, transparent 70%);
+  z-index: 0;
 }
 
 .profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .profile-img {
-  width: 170px;
-  height: 170px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #f0f0f0;
+  margin-bottom: 25px;
+  border: 5px solid #a5b4fc;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  animation: pulseImage 2s infinite ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(165, 180, 252, 0.4);
+  border-color: #818cf8;
 }
 
 .profile-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
-  font-size: 24px;  /* Increased font size */
+  gap: 25px;
+  font-size: 28px;
+  color: #1e293b;
+  font-family: 'Lora', serif;
+  animation: fadeInText 1s ease-in-out forwards;
 }
 
 .profile-field {
   display: flex;
-  gap: 5px;
-  font-size: 24px;  /* Increased font size */
-  color: #333;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+}
+
+.profile-field:hover {
+  color: #4f46e5;
 }
 
 .profile-container1 {
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  font-size: 24px;  /* Increased font size */
+  padding: 30px;
+  background: linear-gradient(45deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  margin-bottom: 35px;
+  font-size: 28px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-container1:hover {
+  background: linear-gradient(45deg, #f1f5f9 0%, #e5e7eb 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
 .profile-container1 p {
-  margin: 12px 0;
-  font-size: 22px;  /* Increased font size */
-  color: #444;
+  margin: 18px 0;
+  font-size: 26px;
+  color: #334155;
+  font-weight: 400;
+  font-family: 'Lora', serif;
+  animation: fadeInText 1.2s ease-in-out forwards;
 }
 
 .btn {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+  gap: 25px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .btn button {
-  padding: 12px 24px;
+  padding: 15px 35px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 18px;  /* Increased button font size */
-  transition: all 0.3s ease;
+  font-size: 19px;
+  color: #fff;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 150px;
+  animation: buttonPop 0.6s ease-out forwards;
+  animation-delay: calc(var(--btn-order) * 0.1s);
 }
 
-.btn button:first-child {
-  background-color: #007bff;
-  color: white;
+.btn button:nth-child(1) { --btn-order: 1; } /* Logout */
+.btn button:nth-child(2) { --btn-order: 2; } /* Edit */
+.btn button:nth-child(3) { --btn-order: 3; } /* Delete */
+
+.btn button:first-child { /* Logout */
+  background: linear-gradient(45deg, #4f46e5, #818cf8);
 }
 
-.btn button:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.btn button:first-child:hover {
+  background: linear-gradient(45deg, #4338ca, #4f46e5);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+}
+
+.btn button:nth-child(2) { /* Edit */
+  background: linear-gradient(45deg, #10b981, #34d399);
+}
+
+.btn button:nth-child(2):hover {
+  background: linear-gradient(45deg, #059669, #10b981);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+}
+
+.btn button:nth-child(3) { /* Delete */
+  background: linear-gradient(45deg, #ef4444, #f87171);
+}
+
+.btn button:nth-child(3):hover {
+  background: linear-gradient(45deg, #dc2626, #ef4444);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+}
+
+/* Button ripple effect */
+.btn button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn button:hover::before {
+  width: 250px;
+  height: 250px;
 }
 
 strong {
-  font-size: 24px;  /* Increased strong text font size */
+  font-size: 28px;
   font-weight: 700;
+  color: #1e293b;
+  font-family: 'Playfair Display', serif;
 }
 
+/* Footer Styling - Fixed at Bottom */
+.footer {
+  background: linear-gradient(135deg, #4f46e5, #818cf8); /* Matching indigo theme */
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Lora', serif;
+  width: 100%;
+  position: fixed; /* Fixed at bottom */
+  bottom: 0; /* Sticks to bottom of viewport */
+  left: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeInFooter 1s ease-in-out forwards;
+  z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseImage {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 600px) {
   .dashboard {
-    padding: 15px;
+    padding: 25px;
+    margin: 25px auto 70px auto; /* Adjusted for smaller footer */
+    border-radius: 12px;
+    min-height: calc(100vh - 95px); /* Adjusted for smaller margins */
   }
 
   .profile-info {
-    flex-direction: column;
-    gap: 10px;
+    gap: 18px;
+    font-size: 24px;
+  }
+
+  .profile-field {
+    font-size: 24px;
+  }
+
+  .profile-container1 {
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  .profile-container1 p {
+    font-size: 22px;
   }
 
   .btn {
     flex-direction: column;
+    gap: 18px;
     width: 100%;
   }
 
   .btn button {
     width: 100%;
-    margin-bottom: 10px;
+    padding: 13px 25px;
+    font-size: 17px;
   }
 
-  .profile-text {
-    font-size: 20px;  /* Increased mobile font size */
+  strong {
+    font-size: 24px;
   }
 
-  .profile-container1 p {
-    font-size: 18px;  /* Increased mobile font size */
+  .footer {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
   }
 }

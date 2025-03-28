@@ -27,7 +27,7 @@ namespace societymanagement.Data
     }
 
 
-    public List<Event>  GetComplain()
+    public List<Event>  GetEvent()
     {
       List<Event> events = new List<Event>();
 

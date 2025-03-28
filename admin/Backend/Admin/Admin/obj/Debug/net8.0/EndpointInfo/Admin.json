@@ -336,6 +336,18 @@
         }
       }
     },
+    "/api/FlatTransferRequest": {
+      "get": {
+        "tags": [
+          "FlatTransferRequest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/MaintenancePayment/all-maintenance-payments": {
       "get": {
         "tags": [
