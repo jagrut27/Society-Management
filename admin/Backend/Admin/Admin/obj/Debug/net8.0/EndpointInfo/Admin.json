@@ -348,6 +348,52 @@
         }
       }
     },
+    "/api/FlatTransferRequest/UpdateStatus/{id}": {
+      "put": {
+        "tags": [
+          "FlatTransferRequest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/FlatTransferRequest/{id}": {
+      "delete": {
+        "tags": [
+          "FlatTransferRequest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/MaintenancePayment/all-maintenance-payments": {
       "get": {
         "tags": [

@@ -1,53 +1,157 @@
-table {
+/* Reset defaults (optional, if not already included) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Heading Styling */
+  h1 {
+    margin-left: 32px;
+    font-size: 2.5rem; /* Larger for emphasis */
+    font-weight: 700; /* Bold for prominence */
+    color: #2c3e50; /* Darker blue-gray for sophistication */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* For custom underline */
+    display: inline-block; /* Fit content */
+    text-transform: uppercase; /* Modern touch */
+    letter-spacing: 1.5px; /* Spacing for elegance */
+    background: linear-gradient(to right, #2c3e50, #3498db); /* Gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: transform 0.3s ease; /* Smooth hover animation */
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2980b9); /* Gradient underline */
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
+    transform: scaleX(0); /* Start hidden */
+    transform-origin: left;
+    transition: transform 0.4s ease; /* Smooth reveal */
+  }
+  
+  h1:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+  }
+  
+  h1:hover::after {
+    transform: scaleX(1); /* Reveal underline on hover */
+  }
+  
+  /* Table Styling */
+  table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 50px;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 20px;
-}
-
-th, td {
-    padding: 12px;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Subtle gradient */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Hover animation */
+  }
+  
+  table:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+  }
+  
+  th,
+  td {
+    padding: 15px 20px; /* More padding for comfort */
     text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-th {
-    background-color: #2c3e50;
+    border-bottom: 1px solid #e0e0e0; /* Lighter border */
+    font-size: 1rem; /* Standardize text size */
+  }
+  
+  th {
+    background: linear-gradient(to right, #2c3e50, #34495e); /* Gradient header */
     color: white;
-
-
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-    background-color: #e0e0e0;
-}
-
-table button {
-    background-color: #e74c3c;
+    font-weight: 600;
+    text-transform: uppercase; /* Modern touch */
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
+  
+  td {
+    color: #34495e; /* Slightly lighter text */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+  }
+  
+  tbody tr {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9fbfc; /* Softer even-row color */
+  }
+  
+  tbody tr:hover {
+    background-color: #eef2f7; /* Lighter, modern hover color */
+    transform: translateX(5px); /* Slight slide effect */
+  }
+  
+  tbody tr:hover td {
+    color: #2c3e50; /* Darken text on hover */
+  }
+  
+  /* Button Styling */
+  table button {
+    background: linear-gradient(45deg, #e74c3c, #c0392b); /* Gradient for delete button */
     color: white;
     border: none;
-    padding: 5px 10px;
-    margin-right: 5px;
+    padding: 8px 14px; /* Slightly larger */
+    margin-right: 8px; /* More spacing */
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-table button:hover {
-    background-color: #c0392b;
-}
-
-table button:nth-child(1) {
-    background-color: #3498db;
-}
-
-table button:nth-child(1):hover {
-    background-color: #2980b9;
-}
+    border-radius: 6px; /* Rounded corners */
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  table button:hover {
+    background: linear-gradient(45deg, #c0392b, #a93226); /* Darker gradient */
+    transform: scale(1.05); /* Slight scale-up */
+    box-shadow: 0 2px 10px rgba(231, 76, 60, 0.4); /* Glow effect */
+  }
+  
+  table button:nth-child(1) {
+    background: linear-gradient(45deg, #3498db, #2980b9); /* Gradient for edit button */
+  }
+  
+  table button:nth-child(1):hover {
+    background: linear-gradient(45deg, #2980b9, #1e3799); /* Darker gradient */
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.4); /* Blue glow */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    h1 {
+      margin-left: 20px; /* Reduce margin */
+      font-size: 2rem; /* Smaller heading */
+    }
+  
+    table {
+      margin-left: 10px; /* Adjust margin */
+      font-size: 0.9rem; /* Smaller text */
+    }
+  
+    th,
+    td {
+      padding: 10px 15px; /* Reduce padding */
+    }
+  
+    table button {
+      padding: 6px 12px; /* Smaller buttons */
+      font-size: 0.85rem;
+    }
+  }

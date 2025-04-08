@@ -13,7 +13,6 @@
           <th>Email </th>
           <th>Amount</th>
           <th>Date</th>
-          <th>approve</th>
           <th>Action</th>
 
           
@@ -32,12 +31,13 @@
           <td>{{flattransfer.newOwnerEmail }}</td>
           <td>{{flattransfer.transfer_fees }}</td>
           <td>{{flattransfer.requestedAt  }}</td>
+          
        
          
        <td> 
-        <!--    <button (click)="deleteRequest(flattransfer.transfer_id)" class="btn btn-danger">
+   <button (click)="deleteRequest(flattransfer.transfer_id)" class="btn btn-danger">
               Delete
-            </button>  --> 
+            </button>  
          </td> 
         </tr> 
       </tbody> 

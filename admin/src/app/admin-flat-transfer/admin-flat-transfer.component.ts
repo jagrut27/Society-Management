@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AdminFlatTransferComponent  implements OnInit{
   FlatTransfer:any[]=[]; 
-  constructor(private http:HttpClient,private router:Router){}
+  constructor(private http:HttpClient,private router:Router,private cdr: ChangeDetectorRef){}
   ngOnInit(): void {
     this.FlatTransferRequest() ;
     throw new Error('Method not implemented.');
@@ -32,8 +32,20 @@ export class AdminFlatTransferComponent  implements OnInit{
 
     );
   }
-  deleteRequest(){
-    
+  deleteRequest(id: number): void {
+    if (confirm('Are you sure you want to delete this member?')) {
+      this.http.delete(`https://localhost:7256/api/FlatTransferRequest/${id}`).subscribe({
+        next: () => {
+          this.FlatTransfer = this.FlatTransfer.filter(FlatTransfer => FlatTransfer.transfer_id !== id);
+          this.cdr.detectChanges(); 
+        //  this.updateTotalMembers();
+        this.FlatTransferRequest();
+        },
+        error: (error) => {
+          console.error('Error deleting member:', error);
+        }
+      });
+    }
   }
 
   backToDashboard() {

@@ -18,9 +18,9 @@ const routes: Routes = [{
   { path: 'admin-events', component: AdminEventsComponent, canActivate: [AuthGuard] },
   {path:'admin-announcement',component:AdminAnnouncementComponent,canActivate:[AuthGuard]},
   {path:'admin-members',component:AdminMembersComponent,canActivate:[AuthGuard]},
-  {path:'admin-complaints',component:AdminComplaintsComponent},
-  {path:'admin-maintenance',component:AdminMaintenanceComponent},
-  {path:'admin-flat-transfer',component:AdminFlatTransferComponent},
+  {path:'admin-complaints',component:AdminComplaintsComponent,canActivate:[AuthGuard]},
+  {path:'admin-maintenance',component:AdminMaintenanceComponent,canActivate:[AuthGuard]},
+  {path:'admin-flat-transfer',component:AdminFlatTransferComponent,canActivate:[AuthGuard]},
   { path: '**', redirectTo: 'admin-login' },
 ];  
 

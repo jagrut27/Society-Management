@@ -169,6 +169,7 @@ export class FlatTransferComponent {
 
         console.log("Api response", response);
         if (response && response.success) {
+          window.location.href="https://rzp.io/rzp/6CeAJ9ac";
           alert(response.message);// Navigate to success page
 
         } else {
@@ -192,7 +193,9 @@ export class FlatTransferComponent {
     });
   }
 
-
+  redirectToRazorpay() {
+    
+  };
 
 
 
